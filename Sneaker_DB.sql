@@ -49,7 +49,7 @@ VALUES
 (3, 'Sandals'),
 (4, 'High Heels'),
 (5, 'Flats'),
-(6, 'Athletic Shoes');
+(6, 'Athletic Shoes'),
 (7, 'Loafers'),
 (8, 'Oxfords'),
 (9, 'Espadrilles'),
@@ -113,7 +113,7 @@ CREATE TABLE `orders` (
   `tracking_number` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `payment_method` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `active` tinyint(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `orders`
@@ -163,15 +163,14 @@ CREATE TABLE `order_details` (
   `price` decimal(10,2) DEFAULT NULL,
   `number_of_products` int DEFAULT '1',
   `total_money` decimal(10,2) DEFAULT '0.00',
-  `color` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT ''
+  `size` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `order_details`
 --
 
-INSERT INTO `order_details` (`id`, `order_id`, `product_id`, `price`, `number_of_products`, `total_money`, `color`) VALUES
-(14, 14, 1, 10.99, 2, 21.98, 'Red'),
+INSERT INTO `order_details` (`id`, `order_id`, `product_id`, `price`, `number_of_products`, `total_money`, `size`) VALUES
 (15, 14, 2, 5.99, 3, 17.97, 'Blue'),
 (16, 14, 3, 8.49, 1, 8.49, 'Green'),
 (17, 15, 1, 10.99, 2, 21.98, 'Red'),
@@ -232,6 +231,25 @@ INSERT INTO `order_details` (`id`, `order_id`, `product_id`, `price`, `number_of
 (72, 42, 5, 32.85, 7, NULL, NULL),
 (73, 42, 7, 32.94, 2, NULL, NULL),
 (74, 42, 9, 45.88, 3, NULL, NULL);
+
+UPDATE `order_details`
+SET `size` = CASE 
+    WHEN `size` = 'Red' THEN 30
+    WHEN `size` = 'Blue' THEN 31
+    WHEN `size` = 'Yellow' THEN 30
+    WHEN `size` = 'Orange' THEN 31
+    WHEN `size` = 'Green' THEN 32
+    WHEN `size` = 'Purple' THEN 33
+    WHEN `size` = 'Pink' THEN 34
+    WHEN `size` = 'Gray' THEN 35
+    WHEN `size` = 'Brown' THEN 36
+    WHEN `size` = 'Black' THEN 37
+    WHEN `size` = 'Silver' THEN 38
+    WHEN `size` = 'Gold' THEN 39
+    WHEN `size` = 'White' THEN 40
+    ELSE `size`
+END
+WHERE `size` IN ('Red', 'Blue', 'Green', 'Purple', 'Pink', 'Gray', 'Brown', 'Black', 'Silver', 'Gold', 'White', 'Yellow', 'Orange');
 
 -- --------------------------------------------------------
 
