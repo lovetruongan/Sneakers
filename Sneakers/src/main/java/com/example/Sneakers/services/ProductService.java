@@ -10,6 +10,7 @@ import com.example.Sneakers.models.ProductImage;
 import com.example.Sneakers.repositories.CategoryRepository;
 import com.example.Sneakers.repositories.ProductImageRepository;
 import com.example.Sneakers.repositories.ProductRepository;
+import com.example.Sneakers.responses.ProductResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -45,8 +46,8 @@ public class ProductService implements IProductService{
     }
 
     @Override
-    public Page<Product> getAllProducts(PageRequest pageRequest) {
-        return productRepository.findAll(pageRequest);
+    public Page<ProductResponse> getAllProducts(PageRequest pageRequest) {
+        return productRepository.findAll(pageRequest).map(ProductResponse::fromProduct);
     }
 
     @Override
