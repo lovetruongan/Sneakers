@@ -2,7 +2,9 @@ package com.example.Sneakers.controllers;
 
 import com.example.Sneakers.dtos.UserDTO;
 import com.example.Sneakers.dtos.UserLoginDTO;
+import com.example.Sneakers.services.UserService;
 import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -15,7 +17,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping("${api.prefix}/users")
+@RequiredArgsConstructor
 public class UserController {
+    private final UserService userService;
     @PostMapping("/register")
     public ResponseEntity<?> createUser(
             @Valid @RequestBody UserDTO userDTO,
@@ -36,6 +40,11 @@ public class UserController {
     }
     @PostMapping("/login")
     public ResponseEntity<?>login(@Valid @RequestBody UserLoginDTO userLoginDTO){
-        return ResponseEntity.ok("Token");
+        try {
+            String token = userService.login(userLoginDTO.getPhoneNumber(), userLoginDTO.getPassword());
+            return ResponseEntity.ok(token);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
     }
 }
