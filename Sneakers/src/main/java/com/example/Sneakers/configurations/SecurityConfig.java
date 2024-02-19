@@ -18,7 +18,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @RequiredArgsConstructor
 public class SecurityConfig {
     private final UserRepository userRepository;
-    private final AuthenticationConfigurationBean authenticationConfigurationBean;
     @Bean
     public UserDetailsService userDetailsService() {
         return phoneNumber -> userRepository
