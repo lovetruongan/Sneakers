@@ -34,7 +34,7 @@ public class CategoryController {
         @RequestParam("page") int page,
         @RequestParam("limit") int limit
     ){
-        List<Category> categories =categoryService.getAllCategories();
+        List<Category> categories = categoryService.getAllCategories();
         return ResponseEntity.ok("List category: " + categories);
     }
     @PutMapping("/{id}")

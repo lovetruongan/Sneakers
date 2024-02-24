@@ -2,6 +2,7 @@ package com.example.Sneakers.controllers;
 
 import com.example.Sneakers.dtos.UserDTO;
 import com.example.Sneakers.dtos.UserLoginDTO;
+import com.example.Sneakers.models.User;
 import com.example.Sneakers.services.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -33,7 +34,8 @@ public class UserController {
             if(!userDTO.getPassword().equals(userDTO.getRetypePassword())){
                 return ResponseEntity.badRequest().body("Password does not match");
             }
-            return ResponseEntity.ok("Register successfully");
+            User user = userService.createUser(userDTO);
+            return ResponseEntity.ok(user);
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }

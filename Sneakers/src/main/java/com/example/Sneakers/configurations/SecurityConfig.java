@@ -15,9 +15,11 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
+
 @RequiredArgsConstructor
 public class SecurityConfig {
     private final UserRepository userRepository;
+    //user's detail object
     @Bean
     public UserDetailsService userDetailsService() {
         return phoneNumber -> userRepository
@@ -31,17 +33,16 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
     @Bean
-    public AuthenticationManager authenticationManager(
-            AuthenticationConfiguration config
-    ) throws Exception {
-        return config.getAuthenticationManager();
-    }
-    @Bean
     public AuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
         authProvider.setUserDetailsService(userDetailsService());
         authProvider.setPasswordEncoder(passwordEncoder());
         return authProvider;
     }
-
+    @Bean
+    public AuthenticationManager authenticationManager(
+            AuthenticationConfiguration config
+    ) throws Exception {
+        return config.getAuthenticationManager();
+    }
 }
