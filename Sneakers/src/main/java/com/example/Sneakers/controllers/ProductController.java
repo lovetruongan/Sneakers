@@ -1,5 +1,6 @@
 package com.example.Sneakers.controllers;
 
+import com.example.Sneakers.components.LocalizationUtils;
 import com.example.Sneakers.dtos.ProductDTO;
 import com.example.Sneakers.dtos.ProductImageDTO;
 import com.example.Sneakers.exceptions.DataNotFoundException;
@@ -8,6 +9,7 @@ import com.example.Sneakers.models.ProductImage;
 import com.example.Sneakers.responses.ProductListResponse;
 import com.example.Sneakers.responses.ProductResponse;
 import com.example.Sneakers.services.ProductService;
+import com.example.Sneakers.utils.MessageKeys;
 import com.github.javafaker.Faker;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -38,6 +40,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class ProductController {
     private final ProductService productService;
+    private final LocalizationUtils localizationUtils;
     @PostMapping("")
     public ResponseEntity<?> createProduct(
             @Valid @RequestBody ProductDTO productDTO,
@@ -88,7 +91,8 @@ public class ProductController {
             Product existingProduct = productService.getProductById(productId);
             files = files == null ? new ArrayList<MultipartFile>() : files;
             if(files.size() > ProductImage.MAXIMUM_IMAGES_PER_PRODUCT){
-                return ResponseEntity.badRequest().body("You can only upload maximum 5 images");
+                return ResponseEntity.badRequest().body(localizationUtils
+                        .getLocalizedMessage(MessageKeys.UPLOAD_IMAGES_MAX_5));
             }
             List<ProductImage> productImages = new ArrayList<>();
             for(MultipartFile file : files){
@@ -98,13 +102,14 @@ public class ProductController {
                 //Kiểm tra kích thước file và định dạng
                 if(file.getSize() > 10*1024*1024){
                     return ResponseEntity.status(HttpStatus.PAYLOAD_TOO_LARGE)
-                            .body("File is too large! Maximum size is 10MB");
+                            .body(localizationUtils
+                                    .getLocalizedMessage(MessageKeys.UPLOAD_IMAGES_FILE_LARGE));
                 }
-                //Kiểm tra định dạnh file
+                //Kiểm tra định dạng file
                 String contentType = file.getContentType();
                 if(contentType == null || !contentType.startsWith("image/")){
                     return ResponseEntity.status(HttpStatus.UNSUPPORTED_MEDIA_TYPE)
-                            .body("File must be an image");
+                            .body(localizationUtils.getLocalizedMessage(MessageKeys.UPLOAD_IMAGES_FILE_MUST_BE_IMAGE));
                 }
                 //Lưu file và cập nhật thumnail trong DTO
                 String fileName = storeFile(file);

@@ -1,10 +1,12 @@
 package com.example.Sneakers.controllers;
 
+import com.example.Sneakers.components.LocalizationUtils;
 import com.example.Sneakers.dtos.OrderDTO;
 import com.example.Sneakers.models.Order;
 import com.example.Sneakers.responses.OrderResponse;
 import com.example.Sneakers.services.IOrderService;
 import com.example.Sneakers.services.OrderService;
+import com.example.Sneakers.utils.MessageKeys;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +21,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class OrderController {
     private final IOrderService orderService;
+    private final LocalizationUtils localizationUtils;
     @PostMapping("")
     public ResponseEntity<?> createOrder(
             @Valid @RequestBody OrderDTO orderDTO,
@@ -71,6 +74,6 @@ public class OrderController {
     public ResponseEntity<?> deleteOrder(@Valid @PathVariable Long id){
         //Xoá mềm => Cập nhật trường active = false
         orderService.deleteOrder(id);
-        return ResponseEntity.ok("Order deleted successfully");
+        return ResponseEntity.ok(localizationUtils.getLocalizedMessage(MessageKeys.DELETE_ORDER_SUCCESSFULLY));
     }
 }

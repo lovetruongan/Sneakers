@@ -1,7 +1,7 @@
 package com.example.Sneakers.services;
 
 
-import com.example.Sneakers.components.JwtTokenUtil;
+import com.example.Sneakers.components.JwtTokenUtils;
 import com.example.Sneakers.dtos.UserDTO;
 import com.example.Sneakers.exceptions.DataNotFoundException;
 import com.example.Sneakers.exceptions.PermissionDenyException;
@@ -25,7 +25,7 @@ public class UserService implements IUserService{
     private final UserRepository userRepository;
     private final RoleRepository roleRepository;
     private final PasswordEncoder passwordEncoder;
-    private final JwtTokenUtil jwtTokenUtil;
+    private final JwtTokenUtils jwtTokenUtil;
     private final AuthenticationManager authenticationManager;
 
     @Override
