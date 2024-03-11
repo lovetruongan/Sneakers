@@ -13,6 +13,7 @@ import com.example.Sneakers.utils.MessageKeys;
 import com.github.javafaker.Faker;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.core.io.UrlResource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -127,12 +128,31 @@ public class ProductController {
         }
     }
 
+    @GetMapping("/images/{imageName}")
+    public ResponseEntity<?> viewImage(@PathVariable String imageName){
+        try {
+            Path imagePath = Paths.get("uploads/"+imageName);
+            UrlResource resource = new UrlResource(imagePath.toUri());
+
+            if(resource.exists()){
+                return ResponseEntity.ok()
+                        .contentType(MediaType.IMAGE_JPEG).body(resource);
+            }
+            else{
+                return ResponseEntity.notFound().build();
+            }
+        }
+        catch (Exception e){
+            return ResponseEntity.notFound().build();
+        }
+    }
+
     @GetMapping("")
     public ResponseEntity<ProductListResponse> getProducts(
             @RequestParam("page")   int page,
             @RequestParam("limit")  int limit
     ){
-        PageRequest pageRequest = PageRequest.of(page,limit, Sort.by("createdAt").descending());
+        PageRequest pageRequest = PageRequest.of(page,limit, Sort.by("id").ascending());
         Page<ProductResponse> productPage = productService.getAllProducts(pageRequest);
 
         int totalPages = productPage.getTotalPages();
