@@ -3,12 +3,11 @@ package com.example.Sneakers.controllers;
 import com.example.Sneakers.components.LocalizationUtils;
 import com.example.Sneakers.dtos.ProductDTO;
 import com.example.Sneakers.dtos.ProductImageDTO;
-import com.example.Sneakers.exceptions.DataNotFoundException;
 import com.example.Sneakers.models.Product;
 import com.example.Sneakers.models.ProductImage;
 import com.example.Sneakers.responses.ProductListResponse;
 import com.example.Sneakers.responses.ProductResponse;
-import com.example.Sneakers.services.ProductService;
+import com.example.Sneakers.services.IProductService;
 import com.example.Sneakers.utils.MessageKeys;
 import com.github.javafaker.Faker;
 import jakarta.validation.Valid;
@@ -40,7 +39,7 @@ import java.util.UUID;
 @RestController
 @RequiredArgsConstructor
 public class ProductController {
-    private final ProductService productService;
+    private final IProductService productService;
     private final LocalizationUtils localizationUtils;
     @PostMapping("")
     public ResponseEntity<?> createProduct(
@@ -139,7 +138,9 @@ public class ProductController {
                         .contentType(MediaType.IMAGE_JPEG).body(resource);
             }
             else{
-                return ResponseEntity.notFound().build();
+                return ResponseEntity.ok()
+                        .contentType(MediaType.IMAGE_JPEG)
+                        .body(new UrlResource(Paths.get("uploads/notfound.jpg").toUri()));
             }
         }
         catch (Exception e){
@@ -149,11 +150,13 @@ public class ProductController {
 
     @GetMapping("")
     public ResponseEntity<ProductListResponse> getProducts(
-            @RequestParam("page")   int page,
-            @RequestParam("limit")  int limit
+            @RequestParam(defaultValue = "") String keyword,
+            @RequestParam(defaultValue = "0", name = "category_id") Long categoryId,
+            @RequestParam(defaultValue = "1")   int page,
+            @RequestParam(defaultValue = "10")  int limit
     ){
-        PageRequest pageRequest = PageRequest.of(page,limit, Sort.by("id").ascending());
-        Page<ProductResponse> productPage = productService.getAllProducts(pageRequest);
+        PageRequest pageRequest = PageRequest.of(page-1,limit, Sort.by("id").ascending());
+        Page<ProductResponse> productPage = productService.getAllProducts(keyword, categoryId, pageRequest);
 
         int totalPages = productPage.getTotalPages();
         List<ProductResponse> products = productPage.getContent();
@@ -163,14 +166,17 @@ public class ProductController {
                         .totalPages(totalPages)
                 .build());
     }
-    @GetMapping("{id}")
-    public ResponseEntity<?> getProductById(@PathVariable("id") Long productId){
+    @GetMapping("/{id}")
+    public ResponseEntity<?> getProductById(
+            @PathVariable("id") Long productId
+    ) {
         try {
-            Product existtingProduct = productService.getProductById(productId);
-            return ResponseEntity.ok(ProductResponse.fromProduct(existtingProduct));
+            Product existingProduct = productService.getProductById(productId);
+            return ResponseEntity.ok(ProductResponse.fromProduct(existingProduct));
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
+
     }
 
     @PutMapping("/{id}")

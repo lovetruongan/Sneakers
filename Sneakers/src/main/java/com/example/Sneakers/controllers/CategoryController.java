@@ -46,7 +46,7 @@ public class CategoryController {
         @RequestParam("limit") int limit
     ){
         List<Category> categories = categoryService.getAllCategories();
-        return ResponseEntity.ok("List category: " + categories);
+        return ResponseEntity.ok(categories);
     }
     @PutMapping("/{id}")
     public ResponseEntity<UpdateCategoryResponse> updateCategory(
