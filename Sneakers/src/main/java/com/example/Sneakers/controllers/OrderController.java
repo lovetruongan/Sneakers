@@ -31,7 +31,7 @@ public class OrderController {
                 List<String> errorMessages = result.getFieldErrors().stream().map(FieldError::getDefaultMessage).toList();
                 return ResponseEntity.badRequest().body(errorMessages);
             }
-            OrderResponse orderResponse = orderService.createOrder(orderDTO);
+            Order orderResponse = orderService.createOrder(orderDTO);
             return ResponseEntity.ok(orderResponse);
         }
         catch (Exception e ){
@@ -52,7 +52,7 @@ public class OrderController {
     public ResponseEntity<?> getOrder(@Valid @PathVariable("id") Long orderId){
         try {
             Order existingOrder = orderService.getOrder(orderId);
-            return ResponseEntity.ok(existingOrder);
+            return ResponseEntity.ok(OrderResponse.fromOrder(existingOrder));
         }
         catch (Exception e ){
             return ResponseEntity.badRequest().body(e.getMessage());

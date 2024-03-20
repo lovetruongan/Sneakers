@@ -59,7 +59,10 @@ public class UserController {
             @Valid @RequestBody UserLoginDTO userLoginDTO,
             HttpServletRequest request){
         try {
-            String token = userService.login(userLoginDTO.getPhoneNumber(), userLoginDTO.getPassword());
+            String token = userService.login(
+                    userLoginDTO.getPhoneNumber(),
+                    userLoginDTO.getPassword(),
+                    userLoginDTO.getRoleId() == null ? 1 : userLoginDTO.getRoleId());
 
             return ResponseEntity.ok(LoginResponse
                     .builder()
