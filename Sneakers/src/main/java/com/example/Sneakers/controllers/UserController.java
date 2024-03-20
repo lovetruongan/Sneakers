@@ -5,6 +5,7 @@ import com.example.Sneakers.dtos.UserLoginDTO;
 import com.example.Sneakers.models.User;
 import com.example.Sneakers.responses.LoginResponse;
 import com.example.Sneakers.responses.RegisterResponse;
+import com.example.Sneakers.responses.UserResponse;
 import com.example.Sneakers.services.UserService;
 import com.example.Sneakers.components.LocalizationUtils;
 import com.example.Sneakers.utils.MessageKeys;
@@ -14,10 +15,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -75,6 +73,16 @@ public class UserController {
                             .builder()
                             .message(localizationUtils.getLocalizedMessage(MessageKeys.LOGIN_FAILED,e.getMessage()))
                             .build());
+        }
+    }
+    @PostMapping("/details")
+    public ResponseEntity<UserResponse> getUserDetails(@RequestHeader("Authorization") String token) {
+        try {
+            String extractedToken = token.substring(7); // Loại bỏ "Bearer " từ chuỗi token
+            User user = userService.getUserDetailsFromToken(extractedToken);
+            return ResponseEntity.ok(UserResponse.fromUser(user));
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().build();
         }
     }
 }
