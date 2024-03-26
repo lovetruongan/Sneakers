@@ -42,6 +42,7 @@ public class CategoryController {
     }
     @GetMapping("")
     public ResponseEntity<?> getAllCategories(
+
 //        @RequestParam("page") int page,
 //        @RequestParam("limit") int limit
     ){

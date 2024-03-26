@@ -28,3 +28,5 @@ api:
 jwt:
   expiration: 2592000
   secretKey: U0roD0fdqXHh6yEzmYciXkhmHlFsS7v2Xa3bLVPsyLQ=
+
+logging.level.org.springframework.security: DEBUG

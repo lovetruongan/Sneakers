@@ -12,6 +12,8 @@ import com.example.Sneakers.responses.OrderResponse;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.cglib.core.Local;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -98,7 +100,8 @@ public class OrderService implements IOrderService{
                 orderDTO.getUserId()).orElseThrow(() ->
                 new DataNotFoundException("Cannot find user with id: " + id));
         modelMapper.typeMap(OrderDTO.class,Order.class)
-                .addMappings(mapper -> mapper.skip(Order::setId));
+                .addMappings(mapper -> mapper.skip(Order::setId))
+                        .addMappings(mapper -> mapper.skip(Order::setOrderDetails));
         modelMapper.map(orderDTO,order);
         order.setUser(existingUser);
         return orderRepository.save(order);
@@ -117,5 +120,10 @@ public class OrderService implements IOrderService{
     @Override
     public List<Order> findByUserId(Long userId) {
         return orderRepository.findByUserId(userId);
+    }
+
+    @Override
+    public Page<Order> getOrdersByKeyword(String keyword, Pageable pageable) {
+        return orderRepository.findByKeyword(keyword, pageable);
     }
 }

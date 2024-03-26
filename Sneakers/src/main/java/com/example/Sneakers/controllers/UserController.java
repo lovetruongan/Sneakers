@@ -27,6 +27,7 @@ import java.util.List;
 public class UserController {
     private final UserService userService;
     private final LocalizationUtils localizationUtils;
+
     @PostMapping("/register")
     public ResponseEntity<RegisterResponse> createUser(
             @Valid @RequestBody UserDTO userDTO,
@@ -77,7 +78,7 @@ public class UserController {
                             .build());
         }
     }
-    @PostMapping("/details")
+    @GetMapping("/details")
     public ResponseEntity<UserResponse> getUserDetails(@RequestHeader("Authorization") String token) {
         try {
             String extractedToken = token.substring(7); // Loại bỏ "Bearer " từ chuỗi token

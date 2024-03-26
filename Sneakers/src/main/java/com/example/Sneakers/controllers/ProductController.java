@@ -12,6 +12,8 @@ import com.example.Sneakers.utils.MessageKeys;
 import com.github.javafaker.Faker;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.core.io.UrlResource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -37,6 +39,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequiredArgsConstructor
 public class ProductController {
+    private static final Logger logger = LoggerFactory.getLogger(ProductController.class);
     private final IProductService productService;
     private final LocalizationUtils localizationUtils;
     @PostMapping("")
@@ -154,6 +157,9 @@ public class ProductController {
             @RequestParam(defaultValue = "10")  int limit
     ){
         PageRequest pageRequest = PageRequest.of(page-1,limit, Sort.by("id").ascending());
+        logger.info(String.format("keyword =  %s, category_id = %d, page = %d, limit = %d",
+                keyword,categoryId,page,limit));
+
         Page<ProductResponse> productPage = productService.getAllProducts(keyword, categoryId, pageRequest);
 
         int totalPages = productPage.getTotalPages();

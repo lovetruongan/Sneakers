@@ -3,13 +3,18 @@ package com.example.Sneakers.controllers;
 import com.example.Sneakers.components.LocalizationUtils;
 import com.example.Sneakers.dtos.OrderDTO;
 import com.example.Sneakers.models.Order;
+import com.example.Sneakers.responses.OrderListResponse;
 import com.example.Sneakers.responses.OrderResponse;
 import com.example.Sneakers.services.IOrderService;
 import com.example.Sneakers.services.OrderService;
 import com.example.Sneakers.utils.MessageKeys;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
@@ -75,5 +80,30 @@ public class OrderController {
         //Xoá mềm => Cập nhật trường active = false
         orderService.deleteOrder(id);
         return ResponseEntity.ok(localizationUtils.getLocalizedMessage(MessageKeys.DELETE_ORDER_SUCCESSFULLY));
+    }
+    @GetMapping("/get-orders-by-keyword")
+//    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public ResponseEntity<OrderListResponse> getOrdersByKeyword(
+            @RequestParam(defaultValue = "", required = false) String keyword,
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int limit
+    ) {
+        // Tạo Pageable từ thông tin trang và giới hạn
+        PageRequest pageRequest = PageRequest.of(
+                page, limit,
+                //Sort.by("createdAt").descending()
+                Sort.by("id").ascending()
+        );
+        Page<OrderResponse> orderPage = orderService
+                .getOrdersByKeyword(keyword, pageRequest)
+                .map(OrderResponse::fromOrder);
+        // Lấy tổng số trang
+        int totalPages = orderPage.getTotalPages();
+        List<OrderResponse> orderResponses = orderPage.getContent();
+        return ResponseEntity.ok(OrderListResponse
+                .builder()
+                .orders(orderResponses)
+                .totalPages(totalPages)
+                .build());
     }
 }
