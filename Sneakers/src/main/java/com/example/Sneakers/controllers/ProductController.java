@@ -164,9 +164,10 @@ public class ProductController {
 
         int totalPages = productPage.getTotalPages();
         List<ProductResponse> products = productPage.getContent();
-
+        long totalProduct = productService.totalProducts();
         return ResponseEntity.ok(ProductListResponse.builder()
                         .products(products)
+                        .totalProducts(totalProduct)
                         .totalPages(totalPages)
                 .build());
     }

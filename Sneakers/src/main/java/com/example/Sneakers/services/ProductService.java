@@ -112,4 +112,9 @@ public class ProductService implements IProductService{
     public List<Product> findProductsByIds(List<Long> productIds) {
         return productRepository.findProductsByIds(productIds);
     }
+
+    @Override
+    public long totalProducts() {
+        return productRepository.count();
+    }
 }
