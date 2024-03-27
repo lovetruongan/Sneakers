@@ -60,6 +60,11 @@ public class ProductService implements IProductService{
     }
 
     @Override
+    public List<Product> allProducts() {
+        return productRepository.findAll();
+    }
+
+    @Override
     @Transactional
     public Product updateProduct(Long id, ProductDTO productDTO) throws Exception {
         Product existingProduct = getProductById(id);

@@ -22,12 +22,12 @@ public class OrderDetailResponse {
     private Float price;
 
     @JsonProperty("number_of_products")
-    private int numberOfProducts;
+    private Long numberOfProducts;
 
     @JsonProperty("total_money")
     private Float totalMoney;
 
-    private int size;
+    private Long size;
     public static OrderDetailResponse fromOrderDetail(OrderDetail orderDetail){
         return OrderDetailResponse.builder()
                 .id(orderDetail.getId())

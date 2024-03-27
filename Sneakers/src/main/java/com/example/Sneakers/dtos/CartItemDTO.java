@@ -14,5 +14,8 @@ public class CartItemDTO {
     private Long productId;
 
     @JsonProperty("quantity")
-    private Integer quantity;
+    private Long quantity;
+
+    @JsonProperty("size")
+    private Long size;
 }

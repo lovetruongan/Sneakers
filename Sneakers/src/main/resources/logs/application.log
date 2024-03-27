@@ -3088,3 +3088,376 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 2024-03-27 16:24:12.567 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-03-27 16:24:12.574 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2024-03-27 16:24:12.588 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-03-27 16:24:23.726 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-03-27 16:24:23.780 [main] INFO  c.e.Sneakers.SneakersApplication - Starting SneakersApplication using Java 18.0.2.1 with PID 16192 (D:\Workspace\Sneakers_BE\Sneakers\target\classes started by dell in D:\Workspace\Sneakers_BE\Sneakers)
+2024-03-27 16:24:23.781 [main] INFO  c.e.Sneakers.SneakersApplication - No active profile set, falling back to 1 default profile: "default"
+2024-03-27 16:24:25.300 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-27 16:24:25.440 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 126 ms. Found 7 JPA repository interfaces.
+2024-03-27 16:24:26.717 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8089 (http)
+2024-03-27 16:24:26.739 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+2024-03-27 16:24:26.743 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-03-27 16:24:26.743 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-27 16:24:26.867 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-03-27 16:24:26.868 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3011 ms
+2024-03-27 16:24:27.138 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-27 16:24:27.247 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-03-27 16:24:27.310 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-03-27 16:24:27.709 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-27 16:24:27.760 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-03-27 16:24:28.007 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@67fac095
+2024-03-27 16:24:28.009 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-03-27 16:24:28.039 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-27 16:24:28.041 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-03-27 16:24:29.491 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-27 16:24:29.494 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-27 16:24:29.982 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-27 16:24:30.095 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-03-27 16:24:31.463 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@46724526, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30b0d271, org.springframework.security.web.context.SecurityContextHolderFilter@646ba7be, org.springframework.security.web.header.HeaderWriterFilter@5b4fd31f, org.springframework.web.filter.CorsFilter@7e4fc391, org.springframework.security.web.authentication.logout.LogoutFilter@440dc4f7, com.example.Sneakers.filters.JwtTokenFilter@62376bdd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@46969355, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ab64f66, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@11869005, org.springframework.security.web.access.ExceptionTranslationFilter@2cfde5a4, org.springframework.security.web.access.intercept.AuthorizationFilter@57832650]
+2024-03-27 16:24:31.925 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+2024-03-27 16:24:31.990 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8089 (http) with context path ''
+2024-03-27 16:24:32.011 [main] INFO  c.e.Sneakers.SneakersApplication - Started SneakersApplication in 9.014 seconds (process running for 9.854)
+2024-03-27 16:24:47.664 [http-nio-8089-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-27 16:24:47.664 [http-nio-8089-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-03-27 16:24:47.665 [http-nio-8089-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-03-27 16:24:47.681 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products?limit=10&keyword=&category_id=&page=1
+2024-03-27 16:24:47.694 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products?limit=10&keyword=&category_id=&page=1
+2024-03-27 16:24:47.723 [http-nio-8089-exec-1] INFO  c.e.S.controllers.ProductController - keyword =  , category_id = 0, page = 1, limit = 10
+2024-03-27 16:24:48.316 [http-nio-8089-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 16:27:34.169 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products?limit=12&keyword=&category_id=&page=1
+2024-03-27 16:27:34.171 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products?limit=12&keyword=&category_id=&page=1
+2024-03-27 16:27:34.175 [http-nio-8089-exec-9] INFO  c.e.S.controllers.ProductController - keyword =  , category_id = 0, page = 1, limit = 12
+2024-03-27 16:27:34.251 [http-nio-8089-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 16:29:38.462 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/users/details
+2024-03-27 16:29:38.575 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/users/details
+2024-03-27 16:33:22.251 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/v1/users/login
+2024-03-27 16:33:22.251 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/v1/users/login
+2024-03-27 16:33:22.588 [http-nio-8089-exec-2] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2024-03-27 16:33:22.618 [http-nio-8089-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 16:33:34.745 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/users/details
+2024-03-27 16:33:34.768 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/users/details
+2024-03-27 16:33:41.070 [http-nio-8089-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/users/details
+2024-03-27 16:33:41.089 [http-nio-8089-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2024-03-27 16:33:41.090 [http-nio-8089-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 16:33:41.152 [http-nio-8089-exec-5] DEBUG o.s.s.w.s.HttpSessionRequestCache - Saved request http://localhost:8089/error?continue to session
+2024-03-27 16:33:41.153 [http-nio-8089-exec-5] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2024-03-27 16:34:53.770 [http-nio-8089-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/v1/users/login
+2024-03-27 16:34:53.770 [http-nio-8089-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/v1/users/login
+2024-03-27 16:34:53.934 [http-nio-8089-exec-10] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2024-03-27 16:34:53.937 [http-nio-8089-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 16:35:06.605 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/users/details
+2024-03-27 16:35:06.617 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/users/details
+2024-03-27 16:35:11.460 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/users/details
+2024-03-27 16:35:11.463 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2024-03-27 16:35:11.463 [http-nio-8089-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 16:35:11.465 [http-nio-8089-exec-4] DEBUG o.s.s.w.s.HttpSessionRequestCache - Saved request http://localhost:8089/error?continue to session
+2024-03-27 16:35:11.465 [http-nio-8089-exec-4] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2024-03-27 16:39:03.238 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/v1/users/login
+2024-03-27 16:39:03.239 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/v1/users/login
+2024-03-27 16:39:03.396 [http-nio-8089-exec-2] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2024-03-27 16:39:03.399 [http-nio-8089-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 16:39:13.145 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/users/details
+2024-03-27 16:39:13.160 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/users/details
+2024-03-27 16:48:53.182 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/users/details
+2024-03-27 16:48:53.197 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/users/details
+2024-03-27 17:02:21.336 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/1f01daad-f0c9-4ee8-89da-29efe6c120a2_giay-nike-air-force-1-dragon-paranoise-replica-7-800x600.jpg
+2024-03-27 17:02:21.337 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/1f01daad-f0c9-4ee8-89da-29efe6c120a2_giay-nike-air-force-1-dragon-paranoise-replica-7-800x600.jpg
+2024-03-27 17:02:21.380 [http-nio-8089-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 17:04:15.951 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/categories?page=1&limit=100
+2024-03-27 17:04:15.951 [http-nio-8089-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/products?page=1&limit=12&keyword=&category_id=0
+2024-03-27 17:04:15.971 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/categories?page=1&limit=100
+2024-03-27 17:04:15.982 [http-nio-8089-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products?page=1&limit=12&keyword=&category_id=0
+2024-03-27 17:04:16.000 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/categories?page=1&limit=100
+2024-03-27 17:04:16.000 [http-nio-8089-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products?page=1&limit=12&keyword=&category_id=0
+2024-03-27 17:04:16.015 [http-nio-8089-exec-5] INFO  c.e.S.controllers.ProductController - keyword =  , category_id = 0, page = 1, limit = 12
+2024-03-27 17:04:16.121 [http-nio-8089-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 17:04:16.171 [http-nio-8089-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 17:04:16.186 [http-nio-8089-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/64baf7b5-635b-4a9e-aec7-03d0fedac82f_nike-air-force-1-low-replica-800x600.jpg
+2024-03-27 17:04:16.187 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/dd4e2fcd-9b54-4d89-988a-df9cfda47f55_giay-nike-air-force-1-low-valentines-day-2024-like-auth.jpg
+2024-03-27 17:04:16.188 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/dd4e2fcd-9b54-4d89-988a-df9cfda47f55_giay-nike-air-force-1-low-valentines-day-2024-like-auth.jpg
+2024-03-27 17:04:16.188 [http-nio-8089-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/64baf7b5-635b-4a9e-aec7-03d0fedac82f_nike-air-force-1-low-replica-800x600.jpg
+2024-03-27 17:04:16.191 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/3fdcde54-b611-45ea-b693-e94b6dca086d_af1-gucci-nike-1-800x600.jpg
+2024-03-27 17:04:16.191 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/ef20dd75-5f3d-4540-aebd-d3a34211e716_Nike-Air-Force-1-Low-G-Dragon-Peaceminusone-Para-Noise-replica-800x600.jpg
+2024-03-27 17:04:16.192 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/ef350705-89f2-4e37-a293-cec3ec4bf069_af1-cream-black-swoosh-800x600.jpg
+2024-03-27 17:04:16.194 [http-nio-8089-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/68c9641a-df79-440d-a7a3-2249e64685db_adidas-superstar-white-replica.jpg
+2024-03-27 17:04:16.194 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/3fdcde54-b611-45ea-b693-e94b6dca086d_af1-gucci-nike-1-800x600.jpg
+2024-03-27 17:04:16.194 [http-nio-8089-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 17:04:16.196 [http-nio-8089-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/68c9641a-df79-440d-a7a3-2249e64685db_adidas-superstar-white-replica.jpg
+2024-03-27 17:04:16.200 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/ef350705-89f2-4e37-a293-cec3ec4bf069_af1-cream-black-swoosh-800x600.jpg
+2024-03-27 17:04:16.200 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/96a4724d-6df3-488c-9ec5-55cb525a921c_Jordan-1-Mid-Light-Smoke-Grey-80.jpg
+2024-03-27 17:04:16.200 [http-nio-8089-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 17:04:16.201 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/ef20dd75-5f3d-4540-aebd-d3a34211e716_Nike-Air-Force-1-Low-G-Dragon-Peaceminusone-Para-Noise-replica-800x600.jpg
+2024-03-27 17:04:16.202 [http-nio-8089-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/75b77e09-5ddb-445f-9456-c0d10ac84acb_Air-Jordan-1-Mid-Panda.jpg
+2024-03-27 17:04:16.202 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/96a4724d-6df3-488c-9ec5-55cb525a921c_Jordan-1-Mid-Light-Smoke-Grey-80.jpg
+2024-03-27 17:04:16.202 [http-nio-8089-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/75b77e09-5ddb-445f-9456-c0d10ac84acb_Air-Jordan-1-Mid-Panda.jpg
+2024-03-27 17:04:16.214 [http-nio-8089-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 17:04:16.214 [http-nio-8089-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 17:04:16.217 [http-nio-8089-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 17:04:16.219 [http-nio-8089-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 17:04:16.221 [http-nio-8089-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 17:04:16.221 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/c2b778a5-4ad6-45c6-a8b4-47f779d23dad_Jordan-1-Mid-Tuxedo-White-Black-800x600.jpg
+2024-03-27 17:04:16.221 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/cd721569-4060-4f22-b63e-6a4fbf3a2d95_Giay-Nike-Air-Jordan-1-Mid-Chicago-White-Toe-800x600.jpg
+2024-03-27 17:04:16.221 [http-nio-8089-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/null
+2024-03-27 17:04:16.222 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/c2b778a5-4ad6-45c6-a8b4-47f779d23dad_Jordan-1-Mid-Tuxedo-White-Black-800x600.jpg
+2024-03-27 17:04:16.222 [http-nio-8089-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 17:04:16.223 [http-nio-8089-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/null
+2024-03-27 17:04:16.223 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/cd721569-4060-4f22-b63e-6a4fbf3a2d95_Giay-Nike-Air-Jordan-1-Mid-Chicago-White-Toe-800x600.jpg
+2024-03-27 17:04:16.228 [http-nio-8089-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 17:04:16.236 [http-nio-8089-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 17:04:16.240 [http-nio-8089-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 17:08:52.672 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/products/1
+2024-03-27 17:08:52.678 [http-nio-8089-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/1
+2024-03-27 17:08:52.679 [http-nio-8089-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/1
+2024-03-27 17:08:52.760 [http-nio-8089-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 17:08:52.768 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/64baf7b5-635b-4a9e-aec7-03d0fedac82f_nike-air-force-1-low-replica-800x600.jpg
+2024-03-27 17:08:52.769 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/64baf7b5-635b-4a9e-aec7-03d0fedac82f_nike-air-force-1-low-replica-800x600.jpg
+2024-03-27 17:08:52.770 [http-nio-8089-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/b59ee515-1c87-4e56-a858-00eb37327f86_af1-full-white-like-auth-11-650x650.jpg
+2024-03-27 17:08:52.770 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/6e7c3444-2475-4880-847d-e6754557316e_af1-full-white-like-auth-6-650x650.jpg
+2024-03-27 17:08:52.770 [http-nio-8089-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/9a59a80f-44b5-457b-8092-7bc20833520d_Nike-AF1-like-auth-650x650.jpg
+2024-03-27 17:08:52.770 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/cd1c656d-c0e4-45aa-be3e-d6be65593b6a_af1-full-white-like-auth-13-650x650.jpg
+2024-03-27 17:08:52.770 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/6e7c3444-2475-4880-847d-e6754557316e_af1-full-white-like-auth-6-650x650.jpg
+2024-03-27 17:08:52.770 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/cd1c656d-c0e4-45aa-be3e-d6be65593b6a_af1-full-white-like-auth-13-650x650.jpg
+2024-03-27 17:08:52.771 [http-nio-8089-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/9a59a80f-44b5-457b-8092-7bc20833520d_Nike-AF1-like-auth-650x650.jpg
+2024-03-27 17:08:52.772 [http-nio-8089-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/b59ee515-1c87-4e56-a858-00eb37327f86_af1-full-white-like-auth-11-650x650.jpg
+2024-03-27 17:08:52.779 [http-nio-8089-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 17:08:52.780 [http-nio-8089-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 17:08:52.780 [http-nio-8089-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 17:08:52.782 [http-nio-8089-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 17:08:52.782 [http-nio-8089-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 19:37:05.955 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h6m5s748ms817µs800ns).
+2024-03-27 20:12:19.852 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-27 20:12:19.932 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-03-27 20:12:19.953 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-03-27 21:05:05.621 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-03-27 21:05:05.687 [main] INFO  c.e.Sneakers.SneakersApplication - Starting SneakersApplication using Java 18.0.2.1 with PID 19780 (D:\Workspace\Sneakers_BE\Sneakers\target\classes started by dell in D:\Workspace\Sneakers_BE\Sneakers)
+2024-03-27 21:05:05.689 [main] INFO  c.e.Sneakers.SneakersApplication - No active profile set, falling back to 1 default profile: "default"
+2024-03-27 21:05:07.140 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-27 21:05:07.286 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 128 ms. Found 8 JPA repository interfaces.
+2024-03-27 21:05:08.501 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8089 (http)
+2024-03-27 21:05:08.516 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+2024-03-27 21:05:08.520 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-03-27 21:05:08.521 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-27 21:05:08.621 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-03-27 21:05:08.623 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2857 ms
+2024-03-27 21:05:08.915 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-27 21:05:09.022 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-03-27 21:05:09.091 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-03-27 21:05:09.592 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-27 21:05:09.636 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-03-27 21:05:09.914 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1a84a8b2
+2024-03-27 21:05:09.917 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-03-27 21:05:09.952 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-27 21:05:09.953 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-03-27 21:05:11.337 [main] INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: com.example.Sneakers.models.Cart (class must be instantiated by Interceptor)
+2024-03-27 21:05:11.708 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-27 21:05:11.719 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-27 21:05:12.423 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-27 21:05:12.599 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-03-27 21:05:17.992 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@60cfa399, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c6a915e, org.springframework.security.web.context.SecurityContextHolderFilter@72b92ce6, org.springframework.security.web.header.HeaderWriterFilter@47609e3d, org.springframework.web.filter.CorsFilter@7917317d, org.springframework.security.web.authentication.logout.LogoutFilter@11987483, com.example.Sneakers.filters.JwtTokenFilter@5b1cedfd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6f215ff3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6066cf5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5319f982, org.springframework.security.web.access.ExceptionTranslationFilter@5de25642, org.springframework.security.web.access.intercept.AuthorizationFilter@11069bdd]
+2024-03-27 21:05:18.644 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+2024-03-27 21:05:18.712 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8089 (http) with context path ''
+2024-03-27 21:05:18.761 [main] INFO  c.e.Sneakers.SneakersApplication - Started SneakersApplication in 13.676 seconds (process running for 15.772)
+2024-03-27 21:06:48.631 [http-nio-8089-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-27 21:06:48.631 [http-nio-8089-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-03-27 21:06:48.633 [http-nio-8089-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-03-27 21:06:48.657 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/v1/carts
+2024-03-27 21:13:11.329 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m31s292ms331µs).
+2024-03-27 21:13:11.384 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing POST /error
+2024-03-27 21:13:11.395 [http-nio-8089-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 21:13:11.501 [http-nio-8089-exec-1] DEBUG o.s.s.w.s.HttpSessionRequestCache - Saved request http://localhost:8089/error?continue to session
+2024-03-27 21:13:11.502 [http-nio-8089-exec-1] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2024-03-27 21:13:11.516 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-27 21:13:11.522 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-03-27 21:13:11.537 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-03-27 21:13:20.930 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-03-27 21:13:20.994 [main] INFO  c.e.Sneakers.SneakersApplication - Starting SneakersApplication using Java 18.0.2.1 with PID 12972 (D:\Workspace\Sneakers_BE\Sneakers\target\classes started by dell in D:\Workspace\Sneakers_BE\Sneakers)
+2024-03-27 21:13:20.996 [main] INFO  c.e.Sneakers.SneakersApplication - No active profile set, falling back to 1 default profile: "default"
+2024-03-27 21:13:22.296 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-27 21:13:22.385 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 79 ms. Found 8 JPA repository interfaces.
+2024-03-27 21:13:23.423 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8089 (http)
+2024-03-27 21:13:23.450 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+2024-03-27 21:13:23.454 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-03-27 21:13:23.454 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-27 21:13:23.544 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-03-27 21:13:23.546 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2466 ms
+2024-03-27 21:13:23.835 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-27 21:13:23.917 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-03-27 21:13:23.974 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-03-27 21:13:24.357 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-27 21:13:24.399 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-03-27 21:13:24.671 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@64ec1459
+2024-03-27 21:13:24.674 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-03-27 21:13:24.703 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-27 21:13:24.705 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-03-27 21:13:25.803 [main] INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: com.example.Sneakers.models.Cart (class must be instantiated by Interceptor)
+2024-03-27 21:13:26.099 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-27 21:13:26.102 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-27 21:13:26.595 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-27 21:13:26.717 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-03-27 21:13:28.144 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@62a153d3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3b21f625, org.springframework.security.web.context.SecurityContextHolderFilter@39caf68a, org.springframework.security.web.header.HeaderWriterFilter@37930f48, org.springframework.web.filter.CorsFilter@5d08bc22, org.springframework.security.web.authentication.logout.LogoutFilter@7dc155b3, com.example.Sneakers.filters.JwtTokenFilter@95aeee4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@ce4a8a2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@53b1a09f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b3ba0a8, org.springframework.security.web.access.ExceptionTranslationFilter@56b9a73c, org.springframework.security.web.access.intercept.AuthorizationFilter@61c0a61]
+2024-03-27 21:13:28.633 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+2024-03-27 21:13:28.668 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8089 (http) with context path ''
+2024-03-27 21:13:28.682 [main] INFO  c.e.Sneakers.SneakersApplication - Started SneakersApplication in 8.26 seconds (process running for 9.14)
+2024-03-27 21:13:34.918 [http-nio-8089-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-27 21:13:34.918 [http-nio-8089-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-03-27 21:13:34.919 [http-nio-8089-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-03-27 21:13:34.945 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/v1/carts
+2024-03-27 21:13:34.968 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing POST /error
+2024-03-27 21:13:34.973 [http-nio-8089-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 21:13:35.053 [http-nio-8089-exec-2] DEBUG o.s.s.w.s.HttpSessionRequestCache - Saved request http://localhost:8089/error?continue to session
+2024-03-27 21:13:35.054 [http-nio-8089-exec-2] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2024-03-27 21:36:20.095 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-27 21:36:20.119 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-03-27 21:36:20.144 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-03-27 21:36:27.394 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-03-27 21:36:27.460 [main] INFO  c.e.Sneakers.SneakersApplication - Starting SneakersApplication using Java 18.0.2.1 with PID 12888 (D:\Workspace\Sneakers_BE\Sneakers\target\classes started by dell in D:\Workspace\Sneakers_BE\Sneakers)
+2024-03-27 21:36:27.462 [main] INFO  c.e.Sneakers.SneakersApplication - No active profile set, falling back to 1 default profile: "default"
+2024-03-27 21:36:28.698 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-27 21:36:28.800 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 91 ms. Found 8 JPA repository interfaces.
+2024-03-27 21:36:30.055 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8089 (http)
+2024-03-27 21:36:30.079 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+2024-03-27 21:36:30.084 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-03-27 21:36:30.085 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-27 21:36:30.219 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-03-27 21:36:30.222 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2676 ms
+2024-03-27 21:36:30.508 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-27 21:36:30.625 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-03-27 21:36:30.701 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-03-27 21:36:31.071 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-27 21:36:31.119 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-03-27 21:36:31.378 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5ad6f98e
+2024-03-27 21:36:31.380 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-03-27 21:36:31.410 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-27 21:36:31.411 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-03-27 21:36:32.511 [main] INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: com.example.Sneakers.models.Cart (class must be instantiated by Interceptor)
+2024-03-27 21:36:32.813 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-27 21:36:32.817 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-27 21:36:33.475 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-27 21:36:33.646 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-03-27 21:36:35.026 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7a0ebd12, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@ee395c, org.springframework.security.web.context.SecurityContextHolderFilter@148a581e, org.springframework.security.web.header.HeaderWriterFilter@4d400e77, org.springframework.web.filter.CorsFilter@79da2f0d, org.springframework.security.web.authentication.logout.LogoutFilter@202e0ff4, com.example.Sneakers.filters.JwtTokenFilter@4a249610, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@66113b7c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7265db9d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@37e57a20, org.springframework.security.web.access.ExceptionTranslationFilter@61cbd0c0, org.springframework.security.web.access.intercept.AuthorizationFilter@52d57307]
+2024-03-27 21:36:35.451 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+2024-03-27 21:36:35.484 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8089 (http) with context path ''
+2024-03-27 21:36:35.498 [main] INFO  c.e.Sneakers.SneakersApplication - Started SneakersApplication in 8.69 seconds (process running for 9.523)
+2024-03-27 21:37:59.736 [http-nio-8089-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-27 21:37:59.737 [http-nio-8089-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-03-27 21:37:59.740 [http-nio-8089-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-03-27 21:37:59.763 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/v1/users/login
+2024-03-27 21:37:59.775 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/v1/users/login
+2024-03-27 21:38:00.514 [http-nio-8089-exec-2] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2024-03-27 21:38:00.617 [http-nio-8089-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 21:38:21.350 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/v1/carts
+2024-03-27 21:38:21.419 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/v1/carts
+2024-03-27 21:40:03.862 [http-nio-8089-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/v1/carts
+2024-03-27 21:40:03.881 [http-nio-8089-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/v1/carts
+2024-03-27 21:46:30.100 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-27 21:46:30.110 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-03-27 21:46:30.125 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-03-27 21:46:35.660 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-03-27 21:46:35.727 [main] INFO  c.e.Sneakers.SneakersApplication - Starting SneakersApplication using Java 18.0.2.1 with PID 11820 (D:\Workspace\Sneakers_BE\Sneakers\target\classes started by dell in D:\Workspace\Sneakers_BE\Sneakers)
+2024-03-27 21:46:35.729 [main] INFO  c.e.Sneakers.SneakersApplication - No active profile set, falling back to 1 default profile: "default"
+2024-03-27 21:46:37.042 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-27 21:46:37.150 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 94 ms. Found 8 JPA repository interfaces.
+2024-03-27 21:46:38.320 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8089 (http)
+2024-03-27 21:46:38.336 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+2024-03-27 21:46:38.341 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-03-27 21:46:38.342 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-27 21:46:38.443 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-03-27 21:46:38.445 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2644 ms
+2024-03-27 21:46:38.718 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-27 21:46:38.814 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-03-27 21:46:38.867 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-03-27 21:46:39.248 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-27 21:46:39.300 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-03-27 21:46:39.668 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5ad6f98e
+2024-03-27 21:46:39.671 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-03-27 21:46:39.719 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-27 21:46:39.720 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-03-27 21:46:40.854 [main] INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: com.example.Sneakers.models.Cart (class must be instantiated by Interceptor)
+2024-03-27 21:46:41.163 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-27 21:46:41.167 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-27 21:46:41.632 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-27 21:46:41.771 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-03-27 21:46:43.185 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@10d1f6da, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ced9545, org.springframework.security.web.context.SecurityContextHolderFilter@bafb3bd, org.springframework.security.web.header.HeaderWriterFilter@11581810, org.springframework.web.filter.CorsFilter@3adb46b5, org.springframework.security.web.authentication.logout.LogoutFilter@380cb7e3, com.example.Sneakers.filters.JwtTokenFilter@22cf1808, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@56b9a73c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@41576e84, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1923a29a, org.springframework.security.web.access.ExceptionTranslationFilter@4568ef38, org.springframework.security.web.access.intercept.AuthorizationFilter@47523643]
+2024-03-27 21:46:43.750 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+2024-03-27 21:46:43.799 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8089 (http) with context path ''
+2024-03-27 21:46:43.821 [main] INFO  c.e.Sneakers.SneakersApplication - Started SneakersApplication in 8.737 seconds (process running for 9.577)
+2024-03-27 21:48:04.637 [http-nio-8089-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-27 21:48:04.638 [http-nio-8089-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-03-27 21:48:04.640 [http-nio-8089-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-03-27 21:48:04.663 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/carts
+2024-03-27 21:48:04.912 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/carts
+2024-03-27 21:55:02.152 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-27 21:55:02.155 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-03-27 21:55:02.167 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-03-27 21:55:08.492 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-03-27 21:55:08.567 [main] INFO  c.e.Sneakers.SneakersApplication - Starting SneakersApplication using Java 18.0.2.1 with PID 17504 (D:\Workspace\Sneakers_BE\Sneakers\target\classes started by dell in D:\Workspace\Sneakers_BE\Sneakers)
+2024-03-27 21:55:08.570 [main] INFO  c.e.Sneakers.SneakersApplication - No active profile set, falling back to 1 default profile: "default"
+2024-03-27 21:55:09.833 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-27 21:55:09.951 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 103 ms. Found 8 JPA repository interfaces.
+2024-03-27 21:55:11.057 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8089 (http)
+2024-03-27 21:55:11.070 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+2024-03-27 21:55:11.074 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-03-27 21:55:11.074 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-27 21:55:11.159 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-03-27 21:55:11.161 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2506 ms
+2024-03-27 21:55:11.446 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-27 21:55:11.553 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-03-27 21:55:11.643 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-03-27 21:55:12.113 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-27 21:55:12.157 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-03-27 21:55:12.389 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e6cbdf1
+2024-03-27 21:55:12.392 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-03-27 21:55:12.422 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-27 21:55:12.424 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-03-27 21:55:14.040 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-27 21:55:14.045 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-27 21:55:14.648 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-27 21:55:14.801 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-03-27 21:55:16.733 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@34f3189, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@aab0379, org.springframework.security.web.context.SecurityContextHolderFilter@61cbd0c0, org.springframework.security.web.header.HeaderWriterFilter@7d5fb53a, org.springframework.web.filter.CorsFilter@4916619e, org.springframework.security.web.authentication.logout.LogoutFilter@562fa8f2, com.example.Sneakers.filters.JwtTokenFilter@423d662a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4d400e77, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2033fd39, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@52d57307, org.springframework.security.web.access.ExceptionTranslationFilter@ed5cf29, org.springframework.security.web.access.intercept.AuthorizationFilter@5cd3f5bf]
+2024-03-27 21:55:17.265 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+2024-03-27 21:55:17.294 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8089 (http) with context path ''
+2024-03-27 21:55:17.310 [main] INFO  c.e.Sneakers.SneakersApplication - Started SneakersApplication in 9.401 seconds (process running for 10.203)
+2024-03-27 21:55:20.638 [http-nio-8089-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-27 21:55:20.638 [http-nio-8089-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-03-27 21:55:20.640 [http-nio-8089-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-03-27 21:55:20.669 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/carts
+2024-03-27 21:55:20.982 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/carts
+2024-03-27 22:12:35.068 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-27 22:12:35.098 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-03-27 22:12:35.157 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-03-27 22:12:45.964 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-03-27 22:12:46.039 [main] INFO  c.e.Sneakers.SneakersApplication - Starting SneakersApplication using Java 18.0.2.1 with PID 19100 (D:\Workspace\Sneakers_BE\Sneakers\target\classes started by dell in D:\Workspace\Sneakers_BE\Sneakers)
+2024-03-27 22:12:46.041 [main] INFO  c.e.Sneakers.SneakersApplication - No active profile set, falling back to 1 default profile: "default"
+2024-03-27 22:12:47.955 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-27 22:12:48.112 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 143 ms. Found 8 JPA repository interfaces.
+2024-03-27 22:12:49.747 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8089 (http)
+2024-03-27 22:12:49.774 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+2024-03-27 22:12:49.780 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-03-27 22:12:49.780 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-27 22:12:49.899 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-03-27 22:12:49.901 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3763 ms
+2024-03-27 22:12:50.226 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-27 22:12:50.432 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-03-27 22:12:50.604 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-03-27 22:12:51.240 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-27 22:12:51.292 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-03-27 22:12:51.583 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5a13f1f7
+2024-03-27 22:12:51.585 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-03-27 22:12:51.625 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-27 22:12:51.627 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-03-27 22:12:53.569 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-27 22:12:53.575 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-27 22:12:54.244 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-27 22:12:54.401 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-03-27 22:12:56.116 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@23243385, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5f83fdf6, org.springframework.security.web.context.SecurityContextHolderFilter@ae094e8, org.springframework.security.web.header.HeaderWriterFilter@24bd88df, org.springframework.web.filter.CorsFilter@7dc155b3, org.springframework.security.web.authentication.logout.LogoutFilter@aab0379, com.example.Sneakers.filters.JwtTokenFilter@24f77077, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7a845f91, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4568ef38, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@725f1346, org.springframework.security.web.access.ExceptionTranslationFilter@34692767, org.springframework.security.web.access.intercept.AuthorizationFilter@7d7be366]
+2024-03-27 22:12:56.675 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+2024-03-27 22:12:56.710 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8089 (http) with context path ''
+2024-03-27 22:12:56.728 [main] INFO  c.e.Sneakers.SneakersApplication - Started SneakersApplication in 11.445 seconds (process running for 12.554)
+2024-03-27 22:13:06.408 [http-nio-8089-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-27 22:13:06.409 [http-nio-8089-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-03-27 22:13:06.410 [http-nio-8089-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-03-27 22:13:06.432 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/all
+2024-03-27 22:13:06.445 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/all
+2024-03-27 22:13:07.097 [http-nio-8089-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-27 22:13:42.039 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-27 22:13:42.045 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-03-27 22:13:42.060 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

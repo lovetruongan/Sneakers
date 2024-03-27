@@ -64,7 +64,8 @@ public class OrderService implements IOrderService{
 
             // Lấy thông tin sản phẩm từ cartItemDTO
             Long productId = cartItemDTO.getProductId();
-            int quantity = cartItemDTO.getQuantity();
+            Long quantity = cartItemDTO.getQuantity();
+            Long size = cartItemDTO.getSize();
 
             // Tìm thông tin sản phẩm từ cơ sở dữ liệu (hoặc sử dụng cache nếu cần)
             Product product = productRepository.findById(productId)
@@ -73,9 +74,11 @@ public class OrderService implements IOrderService{
             // Đặt thông tin cho OrderDetail
             orderDetail.setProduct(product);
             orderDetail.setNumberOfProducts(quantity);
+            orderDetail.setSize(size);
+
             // Các trường khác của OrderDetail nếu cần
             orderDetail.setPrice(product.getPrice());
-
+            orderDetail.setTotalMoney(product.getPrice()*quantity);
             // Thêm OrderDetail vào danh sách
             orderDetails.add(orderDetail);
         }

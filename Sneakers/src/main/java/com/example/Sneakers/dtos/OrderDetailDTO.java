@@ -24,11 +24,11 @@ public class OrderDetailDTO {
 
     @JsonProperty("number_of_products")
     @Min(value = 1,message = "Number of products must be >= 1")
-    private int numberOfProducts;
+    private Long numberOfProducts;
 
     @JsonProperty("total_money")
     @Min(value = 0,message = "Total money must be >= 0")
     private Float totalMoney;
 
-    private int size;
+    private Long size;
 }

@@ -29,10 +29,10 @@ public class OrderDetail {
     private Float price;
 
     @Column(name = "number_of_products",nullable = false)
-    private int numberOfProducts;
+    private Long numberOfProducts;
 
     @Column(name = "total_money",nullable = false)
     private Float totalMoney;
 
-    private int size;
+    private Long size;
 }
