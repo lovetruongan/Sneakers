@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -30,6 +31,15 @@ public class CartService implements ICartService{
                 ));
         String extractedToken = token.substring(7); // Loại bỏ "Bearer " từ chuỗi token
         User user = userService.getUserDetailsFromToken(extractedToken);
+
+        Optional<Cart> existingCartOptional = cartRepository.findByUserAndProductAndSize(user,product,cartItemDTO.getSize());
+
+        if(existingCartOptional.isPresent()){
+            Cart existingCart = existingCartOptional.get();
+            existingCart.setQuantity(existingCart.getQuantity()+cartItemDTO.getQuantity());
+            return cartRepository.save(existingCart);
+        }
+
         Cart cart = Cart.builder()
                 .product(product)
                 .quantity(cartItemDTO.getQuantity())

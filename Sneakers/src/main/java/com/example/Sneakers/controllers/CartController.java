@@ -29,14 +29,20 @@ public class CartController {
     @PostMapping("")
     public ResponseEntity<?> createCart(
             @Valid @RequestBody CartItemDTO cartItemDTO,
-            @RequestHeader("Authorization") String token
+            @RequestHeader("Authorization") String token,
+            BindingResult result
     ) throws Exception {
         try {
+            if(result.hasErrors()){
+                List<String> errorMessages = result.getFieldErrors()
+                        .stream().map(FieldError::getDefaultMessage).toList();
+                return ResponseEntity.badRequest().body(errorMessages);
+            }
             Cart cart = cartService.createCart(cartItemDTO,token);
-            return ResponseEntity.ok(cart);
+            return ResponseEntity.ok("Add to cart successfully!");
         }
         catch (Exception e){
-            return ResponseEntity.badRequest().build();
+            return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
     @GetMapping("")
@@ -53,7 +59,7 @@ public class CartController {
     @PutMapping("/{id}")
     public ResponseEntity<?> updateCart(
             @PathVariable Long id,
-            @RequestBody CartItemDTO cartItemDTO){
+            @Valid @RequestBody CartItemDTO cartItemDTO){
         try {
             Cart updatedCart = cartService.updateCart(id,cartItemDTO);
             return ResponseEntity.ok(updatedCart);
