@@ -122,4 +122,9 @@ public class ProductService implements IProductService{
     public long totalProducts() {
         return productRepository.count();
     }
+
+    @Override
+    public List<Product> getProductsByPrice(Long minPrice, Long maxPrice) {
+        return productRepository.getProductsByPrice(minPrice,maxPrice);
+    }
 }

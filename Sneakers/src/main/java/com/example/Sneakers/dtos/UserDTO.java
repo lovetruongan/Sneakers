@@ -1,5 +1,6 @@
 package com.example.Sneakers.dtos;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -30,6 +31,7 @@ public class UserDTO {
     private String retypePassword;
 
     @JsonProperty("date_of_birth")
+    @JsonFormat(pattern="MM/dd/yyyy")
     private Date dateOfBirth;
 
     @JsonProperty("facebook_account_id")

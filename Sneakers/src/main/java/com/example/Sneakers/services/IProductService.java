@@ -21,4 +21,5 @@ public interface IProductService {
     ProductImage createProductImage(Long productId, ProductImageDTO productImageDTO) throws Exception;
     List<Product> findProductsByIds(List<Long> productIds);
     long totalProducts();
+    List<Product> getProductsByPrice(Long minPrice, Long maxPrice);
 }

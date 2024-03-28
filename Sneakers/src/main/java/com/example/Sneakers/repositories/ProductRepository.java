@@ -28,4 +28,10 @@ public interface ProductRepository extends JpaRepository<Product,Long> {
     @Query("SELECT p FROM Product p WHERE p.id IN :productIds")
     List<Product> findProductsByIds(@Param("productIds") List<Long> productIds);
     long count();
+    @Query("SELECT p FROM Product p " +
+            "WHERE (:minPrice IS NULL OR p.price >= :minPrice) " +
+            "AND (:maxPrice IS NULL OR p.price <= :maxPrice)")
+    List<Product> getProductsByPrice(
+            @Param("minPrice") Long minPrice,
+            @Param("maxPrice") Long maxPrice);
 }

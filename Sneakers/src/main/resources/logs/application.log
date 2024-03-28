@@ -3461,3 +3461,306 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 2024-03-27 22:13:42.039 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-03-27 22:13:42.045 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2024-03-27 22:13:42.060 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-03-27 22:15:10.707 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-03-27 22:15:10.767 [main] INFO  c.e.Sneakers.SneakersApplication - Starting SneakersApplication using Java 18.0.2.1 with PID 19624 (D:\Workspace\Sneakers_BE\Sneakers\target\classes started by dell in D:\Workspace\Sneakers_BE\Sneakers)
+2024-03-27 22:15:10.769 [main] INFO  c.e.Sneakers.SneakersApplication - No active profile set, falling back to 1 default profile: "default"
+2024-03-27 22:15:12.259 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-27 22:15:12.409 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 135 ms. Found 8 JPA repository interfaces.
+2024-03-27 22:15:13.666 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8089 (http)
+2024-03-27 22:15:13.681 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+2024-03-27 22:15:13.685 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-03-27 22:15:13.686 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-27 22:15:13.784 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-03-27 22:15:13.786 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2874 ms
+2024-03-27 22:15:14.039 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-27 22:15:14.156 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-03-27 22:15:14.223 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-03-27 22:15:14.600 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-27 22:15:14.645 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-03-27 22:15:14.925 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@210a26b
+2024-03-27 22:15:14.929 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-03-27 22:15:14.974 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-27 22:15:14.976 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-03-27 22:15:16.746 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-27 22:15:16.750 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-27 22:15:17.390 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-27 22:15:17.520 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-03-27 22:15:19.116 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@ee395c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@79da2f0d, org.springframework.security.web.context.SecurityContextHolderFilter@59f4df4e, org.springframework.security.web.header.HeaderWriterFilter@2033fd39, org.springframework.web.filter.CorsFilter@37e57a20, org.springframework.security.web.authentication.logout.LogoutFilter@19e78fa, com.example.Sneakers.filters.JwtTokenFilter@73753326, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7265db9d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@34692767, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@380cb7e3, org.springframework.security.web.access.ExceptionTranslationFilter@613d4fa6, org.springframework.security.web.access.intercept.AuthorizationFilter@286cd3ad]
+2024-03-27 22:15:19.600 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+2024-03-27 22:15:19.640 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8089 (http) with context path ''
+2024-03-27 22:15:19.654 [main] INFO  c.e.Sneakers.SneakersApplication - Started SneakersApplication in 9.662 seconds (process running for 10.719)
+2024-03-27 22:15:37.030 [http-nio-8089-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-27 22:15:37.031 [http-nio-8089-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-03-27 22:15:37.032 [http-nio-8089-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-03-27 22:15:37.057 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/users/details
+2024-03-27 22:15:37.414 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/users/details
+2024-03-27 22:20:24.376 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-27 22:20:24.382 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-03-27 22:20:24.395 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-03-27 22:20:30.517 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-03-27 22:20:30.582 [main] INFO  c.e.Sneakers.SneakersApplication - Starting SneakersApplication using Java 18.0.2.1 with PID 12136 (D:\Workspace\Sneakers_BE\Sneakers\target\classes started by dell in D:\Workspace\Sneakers_BE\Sneakers)
+2024-03-27 22:20:30.584 [main] INFO  c.e.Sneakers.SneakersApplication - No active profile set, falling back to 1 default profile: "default"
+2024-03-27 22:20:32.007 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-27 22:20:32.132 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 108 ms. Found 8 JPA repository interfaces.
+2024-03-27 22:20:33.575 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8089 (http)
+2024-03-27 22:20:33.594 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+2024-03-27 22:20:33.598 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-03-27 22:20:33.599 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-27 22:20:33.715 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-03-27 22:20:33.717 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3043 ms
+2024-03-27 22:20:34.047 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-27 22:20:34.147 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-03-27 22:20:34.228 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-03-27 22:20:34.657 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-27 22:20:34.704 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-03-27 22:20:34.947 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1f42366
+2024-03-27 22:20:34.950 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-03-27 22:20:34.987 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-27 22:20:34.988 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-03-27 22:20:36.692 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-27 22:20:36.695 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-27 22:20:37.185 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-27 22:20:37.333 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-03-27 22:20:38.687 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@f777d41, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2a0a5865, org.springframework.security.web.context.SecurityContextHolderFilter@64176780, org.springframework.security.web.header.HeaderWriterFilter@606cb314, org.springframework.web.filter.CorsFilter@3f92977a, org.springframework.security.web.authentication.logout.LogoutFilter@1923a29a, com.example.Sneakers.filters.JwtTokenFilter@8de8b07, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6573b345, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c085d4a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1330d15e, org.springframework.security.web.access.ExceptionTranslationFilter@3d2162c5, org.springframework.security.web.access.intercept.AuthorizationFilter@19f19f89]
+2024-03-27 22:20:39.167 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+2024-03-27 22:20:39.201 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8089 (http) with context path ''
+2024-03-27 22:20:39.218 [main] INFO  c.e.Sneakers.SneakersApplication - Started SneakersApplication in 9.288 seconds (process running for 10.14)
+2024-03-27 22:20:43.920 [http-nio-8089-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-27 22:20:43.921 [http-nio-8089-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-03-27 22:20:43.924 [http-nio-8089-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-03-27 22:20:43.949 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/users/details
+2024-03-27 22:20:44.268 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/users/details
+2024-03-27 22:21:25.757 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-27 22:21:25.762 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-03-27 22:21:25.776 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-03-27 22:21:31.529 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-03-27 22:21:31.608 [main] INFO  c.e.Sneakers.SneakersApplication - Starting SneakersApplication using Java 18.0.2.1 with PID 11568 (D:\Workspace\Sneakers_BE\Sneakers\target\classes started by dell in D:\Workspace\Sneakers_BE\Sneakers)
+2024-03-27 22:21:31.610 [main] INFO  c.e.Sneakers.SneakersApplication - No active profile set, falling back to 1 default profile: "default"
+2024-03-27 22:21:33.187 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-27 22:21:33.355 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 152 ms. Found 8 JPA repository interfaces.
+2024-03-27 22:21:34.911 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8089 (http)
+2024-03-27 22:21:34.941 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+2024-03-27 22:21:34.944 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-03-27 22:21:34.944 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-27 22:21:35.027 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-03-27 22:21:35.030 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3342 ms
+2024-03-27 22:21:35.371 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-27 22:21:35.451 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-03-27 22:21:35.497 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-03-27 22:21:36.017 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-27 22:21:36.059 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-03-27 22:21:36.356 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5dae5a70
+2024-03-27 22:21:36.358 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-03-27 22:21:36.385 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-27 22:21:36.386 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-03-27 22:21:38.003 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-27 22:21:38.006 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-27 22:21:38.642 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-27 22:21:38.774 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-03-27 22:21:40.321 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@37e57a20, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@380cb7e3, org.springframework.security.web.context.SecurityContextHolderFilter@7265db9d, org.springframework.security.web.header.HeaderWriterFilter@148a581e, org.springframework.web.filter.CorsFilter@49d94d67, org.springframework.security.web.authentication.logout.LogoutFilter@30396acf, com.example.Sneakers.filters.JwtTokenFilter@35217e0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b98900b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@24bd88df, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6153b116, org.springframework.security.web.access.ExceptionTranslationFilter@2033fd39, org.springframework.security.web.access.intercept.AuthorizationFilter@ee395c]
+2024-03-27 22:21:40.747 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+2024-03-27 22:21:40.777 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8089 (http) with context path ''
+2024-03-27 22:21:40.792 [main] INFO  c.e.Sneakers.SneakersApplication - Started SneakersApplication in 9.873 seconds (process running for 10.769)
+2024-03-27 22:21:44.664 [http-nio-8089-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-27 22:21:44.665 [http-nio-8089-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-03-27 22:21:44.667 [http-nio-8089-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-03-27 22:21:44.690 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/users/details
+2024-03-27 22:21:44.998 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/users/details
+2024-03-27 22:27:31.651 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/users/details
+2024-03-27 22:27:31.671 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/users/details
+2024-03-27 22:27:59.674 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-27 22:27:59.678 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-03-27 22:27:59.691 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-03-28 13:58:49.829 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-03-28 13:58:50.046 [main] INFO  c.e.Sneakers.SneakersApplication - Starting SneakersApplication using Java 18.0.2.1 with PID 10528 (D:\Workspace\Sneakers_BE\Sneakers\target\classes started by dell in D:\Workspace\Sneakers_BE\Sneakers)
+2024-03-28 13:58:50.048 [main] INFO  c.e.Sneakers.SneakersApplication - No active profile set, falling back to 1 default profile: "default"
+2024-03-28 13:58:52.749 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-28 13:58:52.960 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 191 ms. Found 8 JPA repository interfaces.
+2024-03-28 13:58:54.844 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8089 (http)
+2024-03-28 13:58:54.862 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+2024-03-28 13:58:54.867 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-03-28 13:58:54.867 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-28 13:58:54.983 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-03-28 13:58:54.985 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4508 ms
+2024-03-28 13:58:55.311 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-28 13:58:55.406 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-03-28 13:58:55.490 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-03-28 13:58:56.139 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-28 13:58:56.289 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-03-28 13:58:56.733 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@40bf0e15
+2024-03-28 13:58:56.740 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-03-28 13:58:56.797 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-28 13:58:56.801 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-03-28 13:58:58.658 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-28 13:58:58.662 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-28 13:58:59.387 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-28 13:58:59.535 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-03-28 13:59:01.236 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Injection of autowired dependencies failed
+2024-03-28 13:59:01.238 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-28 13:59:01.243 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-03-28 13:59:01.256 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-03-28 13:59:01.259 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-03-28 13:59:01.286 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-03-28 13:59:01.313 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1418)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:959)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.Sneakers.SneakersApplication.main(SneakersApplication.java:11)
+Caused by: java.lang.RuntimeException: Could not postProcess org.springframework.security.config.annotation.web.builders.WebSecurity@64d691b2 of type class org.springframework.security.config.annotation.web.builders.WebSecurity
+	at org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor.postProcess(AutowireBeanFactoryObjectPostProcessor.java:69)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.setFilterChainProxySecurityConfigurer(WebSecurityConfiguration.java:148)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:853)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:508)
+	... 17 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcHandlerMappingIntrospectorRequestTransformer': Cannot resolve reference to bean 'mvcHandlerMappingIntrospector' while setting constructor argument
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:685)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:203)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1191)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:224)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1323)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1284)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:486)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$1.getIfUnique(DefaultListableBeanFactory.java:438)
+	at org.springframework.security.config.annotation.web.builders.WebSecurity.setApplicationContext(WebSecurity.java:397)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.invokeAwareInterfaces(ApplicationContextAwareProcessor.java:112)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.postProcessBeforeInitialization(ApplicationContextAwareProcessor.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:421)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1765)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:411)
+	at org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor.postProcess(AutowireBeanFactoryObjectPostProcessor.java:65)
+	... 23 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'productController' method 
+com.example.Sneakers.controllers.ProductController#getProducts(String, Long, int, int)
+to {GET [/api/v1/products]}: There is already 'productController' bean method
+com.example.Sneakers.controllers.ProductController#getProductsByPrice(Long, Long) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1773)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	... 45 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'productController' method 
+com.example.Sneakers.controllers.ProductController#getProducts(String, Long, int, int)
+to {GET [/api/v1/products]}: There is already 'productController' bean method
+com.example.Sneakers.controllers.ProductController#getProductsByPrice(Long, Long) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1773)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:665)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1385)
+	at org.springframework.beans.factory.BeanFactoryUtils.beansOfTypeIncludingAncestors(BeanFactoryUtils.java:368)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.initHandlerMappings(HandlerMappingIntrospector.java:130)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.afterPropertiesSet(HandlerMappingIntrospector.java:118)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1820)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1769)
+	... 52 common frames omitted
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'productController' method 
+com.example.Sneakers.controllers.ProductController#getProducts(String, Long, int, int)
+to {GET [/api/v1/products]}: There is already 'productController' bean method
+com.example.Sneakers.controllers.ProductController#getProductsByPrice(Long, Long) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:671)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:633)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:486)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:79)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:233)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1820)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1769)
+	... 65 common frames omitted
+2024-03-28 14:02:12.655 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-03-28 14:02:12.761 [main] INFO  c.e.Sneakers.SneakersApplication - Starting SneakersApplication using Java 18.0.2.1 with PID 17948 (D:\Workspace\Sneakers_BE\Sneakers\target\classes started by dell in D:\Workspace\Sneakers_BE\Sneakers)
+2024-03-28 14:02:12.764 [main] INFO  c.e.Sneakers.SneakersApplication - No active profile set, falling back to 1 default profile: "default"
+2024-03-28 14:02:14.260 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-28 14:02:14.366 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 93 ms. Found 8 JPA repository interfaces.
+2024-03-28 14:02:15.422 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8089 (http)
+2024-03-28 14:02:15.436 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+2024-03-28 14:02:15.440 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-03-28 14:02:15.440 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-28 14:02:15.549 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-03-28 14:02:15.551 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2673 ms
+2024-03-28 14:02:15.827 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-28 14:02:15.946 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-03-28 14:02:16.060 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-03-28 14:02:16.507 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-28 14:02:16.555 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-03-28 14:02:16.870 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@64ec1459
+2024-03-28 14:02:16.873 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-03-28 14:02:16.924 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-28 14:02:16.927 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-03-28 14:02:18.658 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-28 14:02:18.663 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-28 14:02:19.322 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-28 14:02:19.479 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-03-28 14:02:21.090 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@620bfd8c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@73f937d9, org.springframework.security.web.context.SecurityContextHolderFilter@52f0b3d8, org.springframework.security.web.header.HeaderWriterFilter@5c501f62, org.springframework.web.filter.CorsFilter@65bd41d8, org.springframework.security.web.authentication.logout.LogoutFilter@45a33515, com.example.Sneakers.filters.JwtTokenFilter@341c0dfc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1b0964cf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@573d3ec6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@40699137, org.springframework.security.web.access.ExceptionTranslationFilter@7534b2a4, org.springframework.security.web.access.intercept.AuthorizationFilter@12008a54]
+2024-03-28 14:02:21.608 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+2024-03-28 14:02:21.642 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8089 (http) with context path ''
+2024-03-28 14:02:21.656 [main] INFO  c.e.Sneakers.SneakersApplication - Started SneakersApplication in 9.725 seconds (process running for 10.758)
+2024-03-28 14:03:30.915 [http-nio-8089-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-28 14:03:30.915 [http-nio-8089-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-03-28 14:03:30.916 [http-nio-8089-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-03-28 14:03:30.936 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/price?minPrice=20000000&maxPrice=50000000
+2024-03-28 14:03:30.951 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/price?minPrice=20000000&maxPrice=50000000
+2024-03-28 14:03:31.505 [http-nio-8089-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-28 14:04:44.447 [http-nio-8089-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/price?minPrice=&maxPrice=
+2024-03-28 14:04:44.448 [http-nio-8089-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/price?minPrice=&maxPrice=
+2024-03-28 14:04:44.457 [http-nio-8089-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'minPrice' for method parameter type Long is present but converted to null]
+2024-03-28 14:04:44.457 [http-nio-8089-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-28 14:04:44.465 [http-nio-8089-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error?minPrice=&maxPrice=
+2024-03-28 14:04:44.466 [http-nio-8089-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-28 14:04:44.560 [http-nio-8089-exec-5] DEBUG o.s.s.w.s.HttpSessionRequestCache - Saved request http://localhost:8089/error?minPrice=&maxPrice=&continue to session
+2024-03-28 14:04:44.561 [http-nio-8089-exec-5] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2024-03-28 14:08:08.121 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/price
+2024-03-28 14:08:08.124 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/price
+2024-03-28 14:08:08.128 [http-nio-8089-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'minPrice' for method parameter type Long is not present]
+2024-03-28 14:08:08.129 [http-nio-8089-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-28 14:08:08.131 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2024-03-28 14:08:08.132 [http-nio-8089-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-28 14:08:08.134 [http-nio-8089-exec-9] DEBUG o.s.s.w.s.HttpSessionRequestCache - Saved request http://localhost:8089/error?continue to session
+2024-03-28 14:08:08.135 [http-nio-8089-exec-9] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2024-03-28 14:09:16.664 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/price?minPrice=1&maxPrice=2
+2024-03-28 14:09:16.664 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/price?minPrice=1&maxPrice=2
+2024-03-28 14:09:16.677 [http-nio-8089-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-03-28 14:12:17.680 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-28 14:12:17.691 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-03-28 14:12:17.712 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

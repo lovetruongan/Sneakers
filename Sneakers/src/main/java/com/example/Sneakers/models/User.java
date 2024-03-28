@@ -1,5 +1,6 @@
 package com.example.Sneakers.models;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
@@ -39,6 +40,7 @@ public class User extends BaseEntity implements UserDetails {
     private boolean isActive;
 
     @Column(name = "date_of_birth")
+    @JsonFormat(pattern="MM/dd/yyyy")
     private Date dateOfBirth;
 
     @Column(name = "facebook_account_id")

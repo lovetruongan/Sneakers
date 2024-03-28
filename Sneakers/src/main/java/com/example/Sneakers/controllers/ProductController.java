@@ -198,6 +198,24 @@ public class ProductController {
         }
 
     }
+    @GetMapping("/price")
+    public ResponseEntity<?> getProductsByPrice(
+            @RequestParam(name="min_price",defaultValue = "0") Long minPrice,
+            @RequestParam(name="max_price",defaultValue = "50000000") Long maxPrice
+    ) {
+        try {
+            List<ProductResponse> productResponses = new ArrayList<>();
+            List<Product> products = productService.getProductsByPrice(minPrice,maxPrice);
+            for(Product product: products){
+                productResponses.add(ProductResponse.fromProduct(product));
+            }
+            return ResponseEntity.ok(productResponses);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+
+    }
+
     @GetMapping("/by-ids")
     public ResponseEntity<?> getProductsByIds(@RequestParam("ids") String ids) {
         //eg: 1,3,5,7
