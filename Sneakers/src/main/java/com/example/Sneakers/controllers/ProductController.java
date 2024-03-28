@@ -210,10 +210,14 @@ public class ProductController {
         try {
             List<ProductResponse> productResponses = new ArrayList<>();
             List<Product> products = productService.getProductsByPrice(minPrice,maxPrice);
+            Long countProductsByPrice = productService.countProductsByPrice(minPrice, maxPrice);
             for(Product product: products){
                 productResponses.add(ProductResponse.fromProduct(product));
             }
-            return ResponseEntity.ok(productResponses);
+            return ResponseEntity.ok(ListProductResponse.builder()
+                            .products(productResponses)
+                            .totalProducts(countProductsByPrice)
+                    .build());
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }

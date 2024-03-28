@@ -34,4 +34,10 @@ public interface ProductRepository extends JpaRepository<Product,Long> {
     List<Product> getProductsByPrice(
             @Param("minPrice") Long minPrice,
             @Param("maxPrice") Long maxPrice);
+    @Query("SELECT COUNT(p) FROM Product p " +
+            "WHERE (:minPrice IS NULL OR p.price >= :minPrice) " +
+            "AND (:maxPrice IS NULL OR p.price <= :maxPrice)")
+    long countProductsByPrice(
+            @Param("minPrice") Long minPrice,
+            @Param("maxPrice") Long maxPrice);
 }

@@ -22,4 +22,5 @@ public interface IProductService {
     List<Product> findProductsByIds(List<Long> productIds);
     long totalProducts();
     List<Product> getProductsByPrice(Long minPrice, Long maxPrice);
+    long countProductsByPrice(Long minPrice,Long maxPrice);
 }

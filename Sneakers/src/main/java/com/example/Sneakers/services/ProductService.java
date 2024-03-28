@@ -127,4 +127,9 @@ public class ProductService implements IProductService{
     public List<Product> getProductsByPrice(Long minPrice, Long maxPrice) {
         return productRepository.getProductsByPrice(minPrice,maxPrice);
     }
+
+    @Override
+    public long countProductsByPrice(Long minPrice, Long maxPrice) {
+        return productRepository.countProductsByPrice(minPrice,maxPrice);
+    }
 }
