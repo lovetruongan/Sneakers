@@ -39,7 +39,7 @@ public class CartController {
                 return ResponseEntity.badRequest().body(errorMessages);
             }
             Cart cart = cartService.createCart(cartItemDTO,token);
-            return ResponseEntity.ok("Add to cart successfully!");
+            return ResponseEntity.ok(cart);
         }
         catch (Exception e){
             return ResponseEntity.badRequest().body(e.getMessage());
