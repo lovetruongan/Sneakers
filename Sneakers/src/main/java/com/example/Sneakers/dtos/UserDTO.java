@@ -31,7 +31,7 @@ public class UserDTO {
     private String retypePassword;
 
     @JsonProperty("date_of_birth")
-    @JsonFormat(pattern="MM/dd/yyyy")
+//    @JsonFormat(pattern="MM/dd/yyyy")
     private Date dateOfBirth;
 
     @JsonProperty("facebook_account_id")
