@@ -5,6 +5,7 @@ import com.example.Sneakers.dtos.ProductDTO;
 import com.example.Sneakers.dtos.ProductImageDTO;
 import com.example.Sneakers.models.Product;
 import com.example.Sneakers.models.ProductImage;
+import com.example.Sneakers.responses.ListProductResponse;
 import com.example.Sneakers.responses.ProductListResponse;
 import com.example.Sneakers.responses.ProductResponse;
 import com.example.Sneakers.services.IProductService;
@@ -192,7 +193,10 @@ public class ProductController {
             for(Product product: products){
                 productResponses.add(ProductResponse.fromProduct(product));
             }
-            return ResponseEntity.ok(productResponses);
+            return ResponseEntity.ok(ListProductResponse.builder()
+                            .products(productResponses)
+                            .totalProducts(productService.totalProducts())
+                    .build());
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
