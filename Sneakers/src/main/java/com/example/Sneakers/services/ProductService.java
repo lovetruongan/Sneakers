@@ -137,12 +137,6 @@ public class ProductService implements IProductService{
                 .totalProducts(productRepository.countProductsByPrice(minPrice,maxPrice))
                 .build();
     }
-
-    @Override
-    public long countProductsByPrice(Long minPrice, Long maxPrice) {
-        return productRepository.countProductsByPrice(minPrice,maxPrice);
-    }
-
     @Override
     public ListProductResponse getProductsByKeyword(String keyword) {
         List<ProductResponse> productResponses = new ArrayList<>();
@@ -157,7 +151,17 @@ public class ProductService implements IProductService{
     }
 
     @Override
-    public long countProductsByKeyword(String keyword) {
-        return productRepository.countProductsByKeyword(keyword);
+    public ListProductResponse getProductsByCategory(Long categoryId) {
+        List<ProductResponse> productResponses = new ArrayList<>();
+        List<Product> products = productRepository.getProductsByCategory(categoryId);
+        for(Product product: products){
+            productResponses.add(ProductResponse.fromProduct(product));
+        }
+        return ListProductResponse.builder()
+                .products(productResponses)
+                .totalProducts(productRepository.countProductsByCategory(categoryId))
+                .build();
     }
+
+
 }

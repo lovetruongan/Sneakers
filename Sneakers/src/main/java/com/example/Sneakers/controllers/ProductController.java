@@ -182,7 +182,17 @@ public class ProductController {
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
-
+    }
+    @GetMapping("/category/{categoryId}")
+    public ResponseEntity<?> getProductByCategory(
+            @PathVariable("categoryId") Long categoryId
+    ) {
+        try {
+            ListProductResponse listProductResponse = productService.getProductsByCategory(categoryId);
+            return ResponseEntity.ok(listProductResponse);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
     }
     @GetMapping("/all")
     public ResponseEntity<?> allProducts(

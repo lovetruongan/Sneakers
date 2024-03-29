@@ -23,7 +23,6 @@ public interface IProductService {
     List<Product> findProductsByIds(List<Long> productIds);
     long totalProducts();
     ListProductResponse getProductsByPrice(Long minPrice, Long maxPrice);
-    long countProductsByPrice(Long minPrice,Long maxPrice);
     ListProductResponse getProductsByKeyword(String keyword);
-    long countProductsByKeyword(String keyword);
+    ListProductResponse getProductsByCategory(Long categoryId);
 }

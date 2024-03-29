@@ -50,4 +50,13 @@ public interface ProductRepository extends JpaRepository<Product,Long> {
                     "OR p.name LIKE %:keyword% OR p.description LIKE %:keyword%)")
     long countProductsByKeyword(
             @Param("keyword") String keyword);
+    @Query("SELECT p FROM Product p " +
+            "WHERE (:categoryId IS NULL OR :categoryId = 0 OR p.category.id = :categoryId)")
+    List<Product> getProductsByCategory(
+            @Param("categoryId") Long categoryId);
+
+    @Query("SELECT COUNT(p) FROM Product p " +
+            "WHERE (:categoryId IS NULL OR :categoryId = 0 OR p.category.id = :categoryId)")
+    long countProductsByCategory(
+            @Param("categoryId") Long categoryId);
 }
