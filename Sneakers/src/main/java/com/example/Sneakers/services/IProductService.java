@@ -4,6 +4,7 @@ import com.example.Sneakers.dtos.ProductDTO;
 import com.example.Sneakers.dtos.ProductImageDTO;
 import com.example.Sneakers.models.Product;
 import com.example.Sneakers.models.ProductImage;
+import com.example.Sneakers.responses.ListProductResponse;
 import com.example.Sneakers.responses.ProductResponse;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -21,6 +22,8 @@ public interface IProductService {
     ProductImage createProductImage(Long productId, ProductImageDTO productImageDTO) throws Exception;
     List<Product> findProductsByIds(List<Long> productIds);
     long totalProducts();
-    List<Product> getProductsByPrice(Long minPrice, Long maxPrice);
+    ListProductResponse getProductsByPrice(Long minPrice, Long maxPrice);
     long countProductsByPrice(Long minPrice,Long maxPrice);
+    ListProductResponse getProductsByKeyword(String keyword);
+    long countProductsByKeyword(String keyword);
 }

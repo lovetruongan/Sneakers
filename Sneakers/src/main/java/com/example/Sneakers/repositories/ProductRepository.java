@@ -40,4 +40,14 @@ public interface ProductRepository extends JpaRepository<Product,Long> {
     long countProductsByPrice(
             @Param("minPrice") Long minPrice,
             @Param("maxPrice") Long maxPrice);
+    @Query("SELECT p FROM Product p " +
+                "WHERE (:keyword IS NULL OR :keyword = '' " +
+                    "OR p.name LIKE %:keyword% OR p.description LIKE %:keyword%)")
+    List<Product> getProductsByKeyword(
+            @Param("keyword") String keyword);
+    @Query("SELECT COUNT(p) FROM Product p " +
+                "WHERE (:keyword IS NULL OR :keyword = '' " +
+                    "OR p.name LIKE %:keyword% OR p.description LIKE %:keyword%)")
+    long countProductsByKeyword(
+            @Param("keyword") String keyword);
 }

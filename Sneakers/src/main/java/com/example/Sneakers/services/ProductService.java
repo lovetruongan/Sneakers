@@ -10,6 +10,7 @@ import com.example.Sneakers.models.ProductImage;
 import com.example.Sneakers.repositories.CategoryRepository;
 import com.example.Sneakers.repositories.ProductImageRepository;
 import com.example.Sneakers.repositories.ProductRepository;
+import com.example.Sneakers.responses.ListProductResponse;
 import com.example.Sneakers.responses.ProductResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -17,6 +18,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -124,12 +126,38 @@ public class ProductService implements IProductService{
     }
 
     @Override
-    public List<Product> getProductsByPrice(Long minPrice, Long maxPrice) {
-        return productRepository.getProductsByPrice(minPrice,maxPrice);
+    public ListProductResponse getProductsByPrice(Long minPrice, Long maxPrice) {
+        List<ProductResponse> productResponses = new ArrayList<>();
+        List<Product> products = productRepository.getProductsByPrice(minPrice,maxPrice);
+        for(Product product: products){
+            productResponses.add(ProductResponse.fromProduct(product));
+        }
+        return ListProductResponse.builder()
+                .products(productResponses)
+                .totalProducts(productRepository.countProductsByPrice(minPrice,maxPrice))
+                .build();
     }
 
     @Override
     public long countProductsByPrice(Long minPrice, Long maxPrice) {
         return productRepository.countProductsByPrice(minPrice,maxPrice);
+    }
+
+    @Override
+    public ListProductResponse getProductsByKeyword(String keyword) {
+        List<ProductResponse> productResponses = new ArrayList<>();
+        List<Product> products = productRepository.getProductsByKeyword(keyword);
+        for(Product product: products){
+            productResponses.add(ProductResponse.fromProduct(product));
+        }
+        return ListProductResponse.builder()
+                .products(productResponses)
+                .totalProducts(productRepository.countProductsByKeyword(keyword))
+                .build();
+    }
+
+    @Override
+    public long countProductsByKeyword(String keyword) {
+        return productRepository.countProductsByKeyword(keyword);
     }
 }
