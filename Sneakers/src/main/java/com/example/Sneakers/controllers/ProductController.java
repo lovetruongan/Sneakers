@@ -194,6 +194,18 @@ public class ProductController {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
+    @GetMapping("/related/{productId}")
+    public ResponseEntity<?> getRelatedProducts(
+            @PathVariable("productId") Long productId
+    ) {
+        try {
+            ListProductResponse listProductResponse = productService.getRelatedProducts(productId);
+            return ResponseEntity.ok(listProductResponse);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
     @GetMapping("/all")
     public ResponseEntity<?> allProducts(
     ) {

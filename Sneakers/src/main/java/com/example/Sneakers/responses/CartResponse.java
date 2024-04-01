@@ -12,13 +12,13 @@ import lombok.*;
 public class CartResponse {
     private Long id;
     private ProductResponse products;
-    private Long quanity;
+    private Long quantity;
     private Long size;
     public static CartResponse fromCart(Cart cart){
         return CartResponse.builder()
                 .id(cart.getId())
                 .products(ProductResponse.fromProduct(cart.getProduct()))
-                .quanity(cart.getQuantity())
+                .quantity(cart.getQuantity())
                 .size(cart.getSize())
                 .build();
     }

@@ -13,6 +13,7 @@ import com.example.Sneakers.repositories.ProductRepository;
 import com.example.Sneakers.responses.ListProductResponse;
 import com.example.Sneakers.responses.ProductResponse;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
@@ -134,7 +135,7 @@ public class ProductService implements IProductService{
         }
         return ListProductResponse.builder()
                 .products(productResponses)
-                .totalProducts(productRepository.countProductsByPrice(minPrice,maxPrice))
+                .totalProducts(productResponses.size())
                 .build();
     }
     @Override
@@ -146,7 +147,7 @@ public class ProductService implements IProductService{
         }
         return ListProductResponse.builder()
                 .products(productResponses)
-                .totalProducts(productRepository.countProductsByKeyword(keyword))
+                .totalProducts(productResponses.size())
                 .build();
     }
 
@@ -159,7 +160,21 @@ public class ProductService implements IProductService{
         }
         return ListProductResponse.builder()
                 .products(productResponses)
-                .totalProducts(productRepository.countProductsByCategory(categoryId))
+                .totalProducts(productResponses.size())
+                .build();
+    }
+
+    @Override
+    public ListProductResponse getRelatedProducts(Long productId) throws Exception {
+        Product product = getProductById(productId);
+        List<Product> products = productRepository.getRelatedProducts(product.getCategory().getId(),PageRequest.of(0, 4));
+        List<ProductResponse> productResponses = new ArrayList<>();
+        for(Product p : products){
+            productResponses.add(ProductResponse.fromProduct(p));
+        }
+        return ListProductResponse.builder()
+                .products(productResponses)
+                .totalProducts(productResponses.size())
                 .build();
     }
 

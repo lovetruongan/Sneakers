@@ -2,6 +2,7 @@ package com.example.Sneakers.repositories;
 
 
 import com.example.Sneakers.models.Product;
+import com.example.Sneakers.models.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -34,29 +35,21 @@ public interface ProductRepository extends JpaRepository<Product,Long> {
     List<Product> getProductsByPrice(
             @Param("minPrice") Long minPrice,
             @Param("maxPrice") Long maxPrice);
-    @Query("SELECT COUNT(p) FROM Product p " +
-            "WHERE (:minPrice IS NULL OR p.price >= :minPrice) " +
-            "AND (:maxPrice IS NULL OR p.price <= :maxPrice)")
-    long countProductsByPrice(
-            @Param("minPrice") Long minPrice,
-            @Param("maxPrice") Long maxPrice);
+
     @Query("SELECT p FROM Product p " +
                 "WHERE (:keyword IS NULL OR :keyword = '' " +
                     "OR p.name LIKE %:keyword% OR p.description LIKE %:keyword%)")
     List<Product> getProductsByKeyword(
             @Param("keyword") String keyword);
-    @Query("SELECT COUNT(p) FROM Product p " +
-                "WHERE (:keyword IS NULL OR :keyword = '' " +
-                    "OR p.name LIKE %:keyword% OR p.description LIKE %:keyword%)")
-    long countProductsByKeyword(
-            @Param("keyword") String keyword);
+
     @Query("SELECT p FROM Product p " +
             "WHERE (:categoryId IS NULL OR :categoryId = 0 OR p.category.id = :categoryId)")
     List<Product> getProductsByCategory(
             @Param("categoryId") Long categoryId);
 
-    @Query("SELECT COUNT(p) FROM Product p " +
-            "WHERE (:categoryId IS NULL OR :categoryId = 0 OR p.category.id = :categoryId)")
-    long countProductsByCategory(
-            @Param("categoryId") Long categoryId);
+    @Query("SELECT p FROM Product p " +
+            "WHERE p.category.id = (SELECT p2.category.id FROM Product p2 WHERE p2.id = :productId) " +
+            "AND p.id != :productId")
+    List<Product> getRelatedProducts(@Param("productId") Long productId, Pageable pageable);
+
 }

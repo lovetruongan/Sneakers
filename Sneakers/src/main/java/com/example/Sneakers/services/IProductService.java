@@ -25,4 +25,5 @@ public interface IProductService {
     ListProductResponse getProductsByPrice(Long minPrice, Long maxPrice);
     ListProductResponse getProductsByKeyword(String keyword);
     ListProductResponse getProductsByCategory(Long categoryId);
+    ListProductResponse getRelatedProducts(Long productId) throws Exception;
 }
