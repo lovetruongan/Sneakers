@@ -8,10 +8,13 @@ import com.example.Sneakers.models.User;
 import com.example.Sneakers.repositories.CartRepository;
 import com.example.Sneakers.repositories.ProductRepository;
 import com.example.Sneakers.repositories.UserRepository;
+import com.example.Sneakers.responses.CartResponse;
+import com.example.Sneakers.responses.ListCartResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -50,10 +53,18 @@ public class CartService implements ICartService{
     }
 
     @Override
-    public List<Cart> getCartsByUserId(String token) throws Exception {
+    public ListCartResponse getCartsByUserId(String token) throws Exception {
         String extractedToken = token.substring(7); // Loại bỏ "Bearer " từ chuỗi token
         User user = userService.getUserDetailsFromToken(extractedToken);
-        return cartRepository.findByUserId(user.getId());
+        List<CartResponse> cartResponses = new ArrayList<>();
+        List<Cart> carts = cartRepository.findByUserId(user.getId());
+        for(Cart cart: carts){
+            cartResponses.add(CartResponse.fromCart(cart));
+        }
+        return ListCartResponse.builder()
+                .carts(cartResponses)
+                .totalCartItems(cartRepository.countByUserId(user.getId()))
+                .build();
     }
 
     @Override
@@ -83,6 +94,11 @@ public class CartService implements ICartService{
         String extractedToken = token.substring(7); // Loại bỏ "Bearer " từ chuỗi token
         User user = userService.getUserDetailsFromToken(extractedToken);
         cartRepository.deleteByUserId(user.getId());
+    }
+
+    @Override
+    public Long countCartsByUserId(Long userId) {
+        return cartRepository.countByUserId(userId);
     }
 
 

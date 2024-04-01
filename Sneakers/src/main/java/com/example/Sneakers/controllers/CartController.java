@@ -8,6 +8,7 @@ import com.example.Sneakers.models.Category;
 import com.example.Sneakers.models.Product;
 import com.example.Sneakers.models.User;
 import com.example.Sneakers.responses.CategoryResponse;
+import com.example.Sneakers.responses.ListCartResponse;
 import com.example.Sneakers.responses.ProductResponse;
 import com.example.Sneakers.services.ICartService;
 import com.example.Sneakers.services.IUserService;
@@ -45,13 +46,14 @@ public class CartController {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
+
     @GetMapping("")
     public ResponseEntity<?> getCartByUserId(
             @RequestHeader("Authorization") String token
     ){
         try {
-            List<Cart> carts = cartService.getCartsByUserId(token);
-            return ResponseEntity.ok(carts);
+            ListCartResponse listCartResponse = cartService.getCartsByUserId(token);
+            return ResponseEntity.ok(listCartResponse);
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
