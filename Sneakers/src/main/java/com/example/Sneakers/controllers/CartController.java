@@ -7,6 +7,7 @@ import com.example.Sneakers.models.Cart;
 import com.example.Sneakers.models.Category;
 import com.example.Sneakers.models.Product;
 import com.example.Sneakers.models.User;
+import com.example.Sneakers.responses.CartResponse;
 import com.example.Sneakers.responses.CategoryResponse;
 import com.example.Sneakers.responses.ListCartResponse;
 import com.example.Sneakers.responses.ProductResponse;
@@ -40,7 +41,7 @@ public class CartController {
                 return ResponseEntity.badRequest().body(errorMessages);
             }
             Cart cart = cartService.createCart(cartItemDTO,token);
-            return ResponseEntity.ok(cart);
+            return ResponseEntity.ok(CartResponse.fromCart(cart));
         }
         catch (Exception e){
             return ResponseEntity.badRequest().body(e.getMessage());
@@ -61,10 +62,11 @@ public class CartController {
     @PutMapping("/{id}")
     public ResponseEntity<?> updateCart(
             @PathVariable Long id,
-            @Valid @RequestBody CartItemDTO cartItemDTO){
+            @Valid @RequestBody CartItemDTO cartItemDTO,
+            @RequestHeader("Authorization") String token){
         try {
-            Cart updatedCart = cartService.updateCart(id,cartItemDTO);
-            return ResponseEntity.ok(updatedCart);
+            Cart updatedCart = cartService.updateCart(id,cartItemDTO,token);
+            return ResponseEntity.ok(CartResponse.fromCart(updatedCart));
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }

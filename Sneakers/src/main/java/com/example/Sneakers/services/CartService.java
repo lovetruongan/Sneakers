@@ -16,6 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -69,13 +70,28 @@ public class CartService implements ICartService{
 
     @Override
     @Transactional
-    public Cart updateCart(Long id, CartItemDTO cartItemDTO) throws Exception {
+    public Cart updateCart(Long id, CartItemDTO cartItemDTO,String token) throws Exception {
+        String extractedToken = token.substring(7); // Loại bỏ "Bearer " từ chuỗi token
+        User user = userService.getUserDetailsFromToken(extractedToken);
         Cart cart = cartRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Cart not found"));
         Product product = productRepository.findById(cartItemDTO.getProductId())
                 .orElseThrow(() -> new DataNotFoundException(
                         "Cannot find product with id = " + cartItemDTO.getProductId()
                 ));
+        if(!Objects.equals(cart.getProduct().getId(), product.getId())){
+            throw new DataNotFoundException("Product's id is not valid");
+        }
+        Optional<Cart> existingCartOptional = cartRepository.findByUserAndProductAndSize(user,product,cartItemDTO.getSize());
+
+        if(existingCartOptional.isPresent()){
+            Cart existingCart = existingCartOptional.get();
+            if(existingCart.getId()!=id){
+                existingCart.setQuantity(existingCart.getQuantity()+cartItemDTO.getQuantity());
+                cartRepository.deleteById(id);
+                return cartRepository.save(existingCart);
+            }
+        }
         cart.setProduct(product);
         cart.setQuantity(cartItemDTO.getQuantity());
         cart.setSize(cartItemDTO.getSize());
