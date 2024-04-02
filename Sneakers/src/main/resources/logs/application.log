@@ -13920,3 +13920,625 @@ Caused by: org.hibernate.query.SyntaxException: At 1:24 and token 'AND', mismatc
 2024-04-02 16:23:13.740 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-04-02 16:23:13.755 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2024-04-02 16:23:13.771 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-02 16:23:18.734 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-04-02 16:23:18.785 [main] INFO  c.e.Sneakers.SneakersApplication - Starting SneakersApplication using Java 18.0.2.1 with PID 2484 (D:\Workspace\Sneakers_BE\Sneakers\target\classes started by dell in D:\Workspace\Sneakers_BE\Sneakers)
+2024-04-02 16:23:18.787 [main] INFO  c.e.Sneakers.SneakersApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-02 16:23:19.759 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-02 16:23:19.831 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 8 JPA repository interfaces.
+2024-04-02 16:23:20.814 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8089 (http)
+2024-04-02 16:23:20.835 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+2024-04-02 16:23:20.840 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-02 16:23:20.840 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-04-02 16:23:20.919 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-02 16:23:20.920 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2072 ms
+2024-04-02 16:23:21.168 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-02 16:23:21.238 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-04-02 16:23:21.288 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-02 16:23:21.563 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-02 16:23:21.604 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-02 16:23:21.757 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b3ad7ca
+2024-04-02 16:23:21.759 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-02 16:23:21.790 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-02 16:23:21.791 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-04-02 16:23:22.884 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-02 16:23:22.886 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-02 16:23:23.274 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-02 16:23:23.379 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-02 16:23:24.589 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@eefc1bf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7546be68, org.springframework.security.web.context.SecurityContextHolderFilter@1fc892c, org.springframework.security.web.header.HeaderWriterFilter@5fcaaf92, org.springframework.web.filter.CorsFilter@2992d955, org.springframework.security.web.authentication.logout.LogoutFilter@74e14434, com.example.Sneakers.filters.JwtTokenFilter@7ec75228, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e2a39b7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6685d5e4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7cf311eb, org.springframework.security.web.access.ExceptionTranslationFilter@50630ff7, org.springframework.security.web.access.intercept.AuthorizationFilter@4203d164]
+2024-04-02 16:23:24.976 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+2024-04-02 16:23:25.003 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8089 (http) with context path ''
+2024-04-02 16:23:25.011 [main] INFO  c.e.Sneakers.SneakersApplication - Started SneakersApplication in 6.661 seconds (process running for 7.164)
+2024-04-02 16:23:52.774 [http-nio-8089-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-02 16:23:52.774 [http-nio-8089-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-02 16:23:52.777 [http-nio-8089-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2024-04-02 16:23:52.793 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/v1/users/login
+2024-04-02 16:23:52.803 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/v1/users/login
+2024-04-02 16:23:53.397 [http-nio-8089-exec-2] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2024-04-02 16:23:53.451 [http-nio-8089-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:24:35.539 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing PUT /api/v1/carts/4
+2024-04-02 16:24:35.596 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured PUT /api/v1/carts/4
+2024-04-02 16:24:52.707 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing PUT /api/v1/carts/4
+2024-04-02 16:24:52.721 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured PUT /api/v1/carts/4
+2024-04-02 16:25:20.855 [http-nio-8089-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing PUT /api/v1/carts/4
+2024-04-02 16:25:20.871 [http-nio-8089-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured PUT /api/v1/carts/4
+2024-04-02 16:26:23.855 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing PUT /api/v1/carts/4
+2024-04-02 16:26:23.875 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured PUT /api/v1/carts/4
+2024-04-02 16:27:25.125 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing PUT /api/v1/carts/4
+2024-04-02 16:27:25.138 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured PUT /api/v1/carts/4
+2024-04-02 16:27:35.919 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing PUT /api/v1/carts/4
+2024-04-02 16:27:35.929 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured PUT /api/v1/carts/4
+2024-04-02 16:27:37.205 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing PUT /api/v1/carts/41
+2024-04-02 16:27:37.213 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured PUT /api/v1/carts/41
+2024-04-02 16:27:46.935 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing PUT /api/v1/carts/1
+2024-04-02 16:27:46.948 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured PUT /api/v1/carts/1
+2024-04-02 16:27:59.990 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing PUT /api/v1/carts/1
+2024-04-02 16:28:00.007 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured PUT /api/v1/carts/1
+2024-04-02 16:28:15.664 [http-nio-8089-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing PUT /api/v1/carts/1
+2024-04-02 16:28:15.674 [http-nio-8089-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured PUT /api/v1/carts/1
+2024-04-02 16:28:38.634 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing PUT /api/v1/carts/2
+2024-04-02 16:28:38.644 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured PUT /api/v1/carts/2
+2024-04-02 16:28:53.653 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing PUT /api/v1/carts/2
+2024-04-02 16:28:53.666 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured PUT /api/v1/carts/2
+2024-04-02 16:29:06.369 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/categories
+2024-04-02 16:29:06.371 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/users/details
+2024-04-02 16:29:06.371 [http-nio-8089-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/carts
+2024-04-02 16:29:06.373 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/carts
+2024-04-02 16:29:06.379 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/categories
+2024-04-02 16:29:06.384 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/users/details
+2024-04-02 16:29:06.384 [http-nio-8089-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/carts
+2024-04-02 16:29:06.399 [http-nio-8089-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/carts
+2024-04-02 16:29:06.402 [http-nio-8089-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:29:06.405 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/users/details
+2024-04-02 16:29:06.458 [http-nio-8089-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/carts
+2024-04-02 16:29:06.476 [http-nio-8089-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/carts
+2024-04-02 16:29:06.598 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/64baf7b5-635b-4a9e-aec7-03d0fedac82f_nike-air-force-1-low-replica-800x600.jpg
+2024-04-02 16:29:06.599 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/64baf7b5-635b-4a9e-aec7-03d0fedac82f_nike-air-force-1-low-replica-800x600.jpg
+2024-04-02 16:29:06.606 [http-nio-8089-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/68c9641a-df79-440d-a7a3-2249e64685db_adidas-superstar-white-replica.jpg
+2024-04-02 16:29:06.607 [http-nio-8089-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/68c9641a-df79-440d-a7a3-2249e64685db_adidas-superstar-white-replica.jpg
+2024-04-02 16:29:06.610 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/ef20dd75-5f3d-4540-aebd-d3a34211e716_Nike-Air-Force-1-Low-G-Dragon-Peaceminusone-Para-Noise-replica-800x600.jpg
+2024-04-02 16:29:06.611 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/ef20dd75-5f3d-4540-aebd-d3a34211e716_Nike-Air-Force-1-Low-G-Dragon-Peaceminusone-Para-Noise-replica-800x600.jpg
+2024-04-02 16:29:06.612 [http-nio-8089-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:29:06.623 [http-nio-8089-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:29:06.623 [http-nio-8089-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:29:10.073 [http-nio-8089-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/categories
+2024-04-02 16:29:10.073 [http-nio-8089-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/categories
+2024-04-02 16:29:10.078 [http-nio-8089-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:29:10.444 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/users/details
+2024-04-02 16:29:10.444 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/carts
+2024-04-02 16:29:10.457 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/users/details
+2024-04-02 16:29:10.457 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/carts
+2024-04-02 16:29:11.223 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/all
+2024-04-02 16:29:11.224 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/all
+2024-04-02 16:29:11.407 [http-nio-8089-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:29:11.423 [http-nio-8089-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/68c9641a-df79-440d-a7a3-2249e64685db_adidas-superstar-white-replica.jpg
+2024-04-02 16:29:11.423 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/64baf7b5-635b-4a9e-aec7-03d0fedac82f_nike-air-force-1-low-replica-800x600.jpg
+2024-04-02 16:29:11.425 [http-nio-8089-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/68c9641a-df79-440d-a7a3-2249e64685db_adidas-superstar-white-replica.jpg
+2024-04-02 16:29:11.425 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/64baf7b5-635b-4a9e-aec7-03d0fedac82f_nike-air-force-1-low-replica-800x600.jpg
+2024-04-02 16:29:11.425 [http-nio-8089-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/ef350705-89f2-4e37-a293-cec3ec4bf069_af1-cream-black-swoosh-800x600.jpg
+2024-04-02 16:29:11.425 [http-nio-8089-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/ef350705-89f2-4e37-a293-cec3ec4bf069_af1-cream-black-swoosh-800x600.jpg
+2024-04-02 16:29:11.427 [http-nio-8089-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/dd4e2fcd-9b54-4d89-988a-df9cfda47f55_giay-nike-air-force-1-low-valentines-day-2024-like-auth.jpg
+2024-04-02 16:29:11.428 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/ef20dd75-5f3d-4540-aebd-d3a34211e716_Nike-Air-Force-1-Low-G-Dragon-Peaceminusone-Para-Noise-replica-800x600.jpg
+2024-04-02 16:29:11.428 [http-nio-8089-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/dd4e2fcd-9b54-4d89-988a-df9cfda47f55_giay-nike-air-force-1-low-valentines-day-2024-like-auth.jpg
+2024-04-02 16:29:11.428 [http-nio-8089-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:29:11.428 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/ef20dd75-5f3d-4540-aebd-d3a34211e716_Nike-Air-Force-1-Low-G-Dragon-Peaceminusone-Para-Noise-replica-800x600.jpg
+2024-04-02 16:29:11.431 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/3fdcde54-b611-45ea-b693-e94b6dca086d_af1-gucci-nike-1-800x600.jpg
+2024-04-02 16:29:11.432 [http-nio-8089-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:29:11.432 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/3fdcde54-b611-45ea-b693-e94b6dca086d_af1-gucci-nike-1-800x600.jpg
+2024-04-02 16:29:11.435 [http-nio-8089-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:29:11.436 [http-nio-8089-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:29:11.437 [http-nio-8089-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:29:11.437 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/cd721569-4060-4f22-b63e-6a4fbf3a2d95_Giay-Nike-Air-Jordan-1-Mid-Chicago-White-Toe-800x600.jpg
+2024-04-02 16:29:11.437 [http-nio-8089-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/75b77e09-5ddb-445f-9456-c0d10ac84acb_Air-Jordan-1-Mid-Panda.jpg
+2024-04-02 16:29:11.438 [http-nio-8089-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/75b77e09-5ddb-445f-9456-c0d10ac84acb_Air-Jordan-1-Mid-Panda.jpg
+2024-04-02 16:29:11.438 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/cd721569-4060-4f22-b63e-6a4fbf3a2d95_Giay-Nike-Air-Jordan-1-Mid-Chicago-White-Toe-800x600.jpg
+2024-04-02 16:29:11.440 [http-nio-8089-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:29:11.441 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/96a4724d-6df3-488c-9ec5-55cb525a921c_Jordan-1-Mid-Light-Smoke-Grey-80.jpg
+2024-04-02 16:29:11.442 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/96a4724d-6df3-488c-9ec5-55cb525a921c_Jordan-1-Mid-Light-Smoke-Grey-80.jpg
+2024-04-02 16:29:11.442 [http-nio-8089-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:29:11.442 [http-nio-8089-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:29:11.442 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/c2b778a5-4ad6-45c6-a8b4-47f779d23dad_Jordan-1-Mid-Tuxedo-White-Black-800x600.jpg
+2024-04-02 16:29:11.442 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/c2b778a5-4ad6-45c6-a8b4-47f779d23dad_Jordan-1-Mid-Tuxedo-White-Black-800x600.jpg
+2024-04-02 16:29:11.445 [http-nio-8089-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/0ce3ac5f-fc54-4b7b-afc4-a67be12d06ef_adidas-adidas-samba-classic-white-800x650.jpg
+2024-04-02 16:29:11.447 [http-nio-8089-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/0ce3ac5f-fc54-4b7b-afc4-a67be12d06ef_adidas-adidas-samba-classic-white-800x650.jpg
+2024-04-02 16:29:11.447 [http-nio-8089-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:29:11.448 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/85c00f76-5962-480e-80b2-cec0bf541a33_adidas-stan-smith-xanh-navy-replica-800x650.jpg
+2024-04-02 16:29:11.448 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/85c00f76-5962-480e-80b2-cec0bf541a33_adidas-stan-smith-xanh-navy-replica-800x650.jpg
+2024-04-02 16:29:11.451 [http-nio-8089-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:29:11.452 [http-nio-8089-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:29:11.452 [http-nio-8089-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:31.134 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/categories
+2024-04-02 16:32:31.134 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/all
+2024-04-02 16:32:31.136 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/all
+2024-04-02 16:32:31.136 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/categories
+2024-04-02 16:32:31.144 [http-nio-8089-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:31.242 [http-nio-8089-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:31.305 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/64baf7b5-635b-4a9e-aec7-03d0fedac82f_nike-air-force-1-low-replica-800x600.jpg
+2024-04-02 16:32:31.307 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/64baf7b5-635b-4a9e-aec7-03d0fedac82f_nike-air-force-1-low-replica-800x600.jpg
+2024-04-02 16:32:31.312 [http-nio-8089-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:31.338 [http-nio-8089-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/ef350705-89f2-4e37-a293-cec3ec4bf069_af1-cream-black-swoosh-800x600.jpg
+2024-04-02 16:32:31.338 [http-nio-8089-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/68c9641a-df79-440d-a7a3-2249e64685db_adidas-superstar-white-replica.jpg
+2024-04-02 16:32:31.338 [http-nio-8089-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/ef350705-89f2-4e37-a293-cec3ec4bf069_af1-cream-black-swoosh-800x600.jpg
+2024-04-02 16:32:31.338 [http-nio-8089-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/68c9641a-df79-440d-a7a3-2249e64685db_adidas-superstar-white-replica.jpg
+2024-04-02 16:32:31.348 [http-nio-8089-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:31.350 [http-nio-8089-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:31.355 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/ef20dd75-5f3d-4540-aebd-d3a34211e716_Nike-Air-Force-1-Low-G-Dragon-Peaceminusone-Para-Noise-replica-800x600.jpg
+2024-04-02 16:32:31.356 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/ef20dd75-5f3d-4540-aebd-d3a34211e716_Nike-Air-Force-1-Low-G-Dragon-Peaceminusone-Para-Noise-replica-800x600.jpg
+2024-04-02 16:32:31.359 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/3fdcde54-b611-45ea-b693-e94b6dca086d_af1-gucci-nike-1-800x600.jpg
+2024-04-02 16:32:31.360 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/3fdcde54-b611-45ea-b693-e94b6dca086d_af1-gucci-nike-1-800x600.jpg
+2024-04-02 16:32:31.369 [http-nio-8089-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:31.370 [http-nio-8089-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:31.373 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/75b77e09-5ddb-445f-9456-c0d10ac84acb_Air-Jordan-1-Mid-Panda.jpg
+2024-04-02 16:32:31.374 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/75b77e09-5ddb-445f-9456-c0d10ac84acb_Air-Jordan-1-Mid-Panda.jpg
+2024-04-02 16:32:31.374 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/dd4e2fcd-9b54-4d89-988a-df9cfda47f55_giay-nike-air-force-1-low-valentines-day-2024-like-auth.jpg
+2024-04-02 16:32:31.374 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/dd4e2fcd-9b54-4d89-988a-df9cfda47f55_giay-nike-air-force-1-low-valentines-day-2024-like-auth.jpg
+2024-04-02 16:32:31.373 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/cd721569-4060-4f22-b63e-6a4fbf3a2d95_Giay-Nike-Air-Jordan-1-Mid-Chicago-White-Toe-800x600.jpg
+2024-04-02 16:32:31.383 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/cd721569-4060-4f22-b63e-6a4fbf3a2d95_Giay-Nike-Air-Jordan-1-Mid-Chicago-White-Toe-800x600.jpg
+2024-04-02 16:32:31.384 [http-nio-8089-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:31.388 [http-nio-8089-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:31.390 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/c2b778a5-4ad6-45c6-a8b4-47f779d23dad_Jordan-1-Mid-Tuxedo-White-Black-800x600.jpg
+2024-04-02 16:32:31.390 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/0ce3ac5f-fc54-4b7b-afc4-a67be12d06ef_adidas-adidas-samba-classic-white-800x650.jpg
+2024-04-02 16:32:31.390 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/0ce3ac5f-fc54-4b7b-afc4-a67be12d06ef_adidas-adidas-samba-classic-white-800x650.jpg
+2024-04-02 16:32:31.388 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/96a4724d-6df3-488c-9ec5-55cb525a921c_Jordan-1-Mid-Light-Smoke-Grey-80.jpg
+2024-04-02 16:32:31.391 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/c2b778a5-4ad6-45c6-a8b4-47f779d23dad_Jordan-1-Mid-Tuxedo-White-Black-800x600.jpg
+2024-04-02 16:32:31.391 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/96a4724d-6df3-488c-9ec5-55cb525a921c_Jordan-1-Mid-Light-Smoke-Grey-80.jpg
+2024-04-02 16:32:31.394 [http-nio-8089-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:31.394 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/85c00f76-5962-480e-80b2-cec0bf541a33_adidas-stan-smith-xanh-navy-replica-800x650.jpg
+2024-04-02 16:32:31.395 [http-nio-8089-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:31.396 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/85c00f76-5962-480e-80b2-cec0bf541a33_adidas-stan-smith-xanh-navy-replica-800x650.jpg
+2024-04-02 16:32:31.396 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/64baf7b5-635b-4a9e-aec7-03d0fedac82f_nike-air-force-1-low-replica-800x600.jpg
+2024-04-02 16:32:31.401 [http-nio-8089-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:31.401 [http-nio-8089-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:31.403 [http-nio-8089-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:31.403 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/64baf7b5-635b-4a9e-aec7-03d0fedac82f_nike-air-force-1-low-replica-800x600.jpg
+2024-04-02 16:32:31.413 [http-nio-8089-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:31.759 [http-nio-8089-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/users/details
+2024-04-02 16:32:31.759 [http-nio-8089-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/carts
+2024-04-02 16:32:31.769 [http-nio-8089-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/carts
+2024-04-02 16:32:31.769 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/users/details
+2024-04-02 16:32:31.783 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/users/details
+2024-04-02 16:32:31.783 [http-nio-8089-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/carts
+2024-04-02 16:32:31.786 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/64baf7b5-635b-4a9e-aec7-03d0fedac82f_nike-air-force-1-low-replica-800x600.jpg
+2024-04-02 16:32:31.787 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/64baf7b5-635b-4a9e-aec7-03d0fedac82f_nike-air-force-1-low-replica-800x600.jpg
+2024-04-02 16:32:31.788 [http-nio-8089-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/68c9641a-df79-440d-a7a3-2249e64685db_adidas-superstar-white-replica.jpg
+2024-04-02 16:32:31.791 [http-nio-8089-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/68c9641a-df79-440d-a7a3-2249e64685db_adidas-superstar-white-replica.jpg
+2024-04-02 16:32:31.795 [http-nio-8089-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:31.797 [http-nio-8089-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:31.799 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/ef20dd75-5f3d-4540-aebd-d3a34211e716_Nike-Air-Force-1-Low-G-Dragon-Peaceminusone-Para-Noise-replica-800x600.jpg
+2024-04-02 16:32:31.800 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/ef20dd75-5f3d-4540-aebd-d3a34211e716_Nike-Air-Force-1-Low-G-Dragon-Peaceminusone-Para-Noise-replica-800x600.jpg
+2024-04-02 16:32:31.800 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/ef350705-89f2-4e37-a293-cec3ec4bf069_af1-cream-black-swoosh-800x600.jpg
+2024-04-02 16:32:31.801 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/ef350705-89f2-4e37-a293-cec3ec4bf069_af1-cream-black-swoosh-800x600.jpg
+2024-04-02 16:32:31.803 [http-nio-8089-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:31.805 [http-nio-8089-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:31.816 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/3fdcde54-b611-45ea-b693-e94b6dca086d_af1-gucci-nike-1-800x600.jpg
+2024-04-02 16:32:31.817 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/3fdcde54-b611-45ea-b693-e94b6dca086d_af1-gucci-nike-1-800x600.jpg
+2024-04-02 16:32:31.818 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/dd4e2fcd-9b54-4d89-988a-df9cfda47f55_giay-nike-air-force-1-low-valentines-day-2024-like-auth.jpg
+2024-04-02 16:32:31.819 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/dd4e2fcd-9b54-4d89-988a-df9cfda47f55_giay-nike-air-force-1-low-valentines-day-2024-like-auth.jpg
+2024-04-02 16:32:31.821 [http-nio-8089-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:31.821 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/cd721569-4060-4f22-b63e-6a4fbf3a2d95_Giay-Nike-Air-Jordan-1-Mid-Chicago-White-Toe-800x600.jpg
+2024-04-02 16:32:31.821 [http-nio-8089-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:31.822 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/cd721569-4060-4f22-b63e-6a4fbf3a2d95_Giay-Nike-Air-Jordan-1-Mid-Chicago-White-Toe-800x600.jpg
+2024-04-02 16:32:31.831 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/75b77e09-5ddb-445f-9456-c0d10ac84acb_Air-Jordan-1-Mid-Panda.jpg
+2024-04-02 16:32:31.831 [http-nio-8089-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/96a4724d-6df3-488c-9ec5-55cb525a921c_Jordan-1-Mid-Light-Smoke-Grey-80.jpg
+2024-04-02 16:32:31.831 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/75b77e09-5ddb-445f-9456-c0d10ac84acb_Air-Jordan-1-Mid-Panda.jpg
+2024-04-02 16:32:31.831 [http-nio-8089-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/96a4724d-6df3-488c-9ec5-55cb525a921c_Jordan-1-Mid-Light-Smoke-Grey-80.jpg
+2024-04-02 16:32:31.833 [http-nio-8089-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:31.835 [http-nio-8089-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:31.836 [http-nio-8089-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:31.841 [http-nio-8089-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/c2b778a5-4ad6-45c6-a8b4-47f779d23dad_Jordan-1-Mid-Tuxedo-White-Black-800x600.jpg
+2024-04-02 16:32:31.841 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/0ce3ac5f-fc54-4b7b-afc4-a67be12d06ef_adidas-adidas-samba-classic-white-800x650.jpg
+2024-04-02 16:32:31.841 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/85c00f76-5962-480e-80b2-cec0bf541a33_adidas-stan-smith-xanh-navy-replica-800x650.jpg
+2024-04-02 16:32:31.841 [http-nio-8089-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/c2b778a5-4ad6-45c6-a8b4-47f779d23dad_Jordan-1-Mid-Tuxedo-White-Black-800x600.jpg
+2024-04-02 16:32:31.842 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/0ce3ac5f-fc54-4b7b-afc4-a67be12d06ef_adidas-adidas-samba-classic-white-800x650.jpg
+2024-04-02 16:32:31.842 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/85c00f76-5962-480e-80b2-cec0bf541a33_adidas-stan-smith-xanh-navy-replica-800x650.jpg
+2024-04-02 16:32:31.844 [http-nio-8089-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:31.845 [http-nio-8089-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:31.845 [http-nio-8089-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:45.335 [http-nio-8089-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/1
+2024-04-02 16:32:45.337 [http-nio-8089-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/1
+2024-04-02 16:32:45.371 [http-nio-8089-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:45.408 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/64baf7b5-635b-4a9e-aec7-03d0fedac82f_nike-air-force-1-low-replica-800x600.jpg
+2024-04-02 16:32:45.409 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/64baf7b5-635b-4a9e-aec7-03d0fedac82f_nike-air-force-1-low-replica-800x600.jpg
+2024-04-02 16:32:45.412 [http-nio-8089-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:45.424 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/6e7c3444-2475-4880-847d-e6754557316e_af1-full-white-like-auth-6-650x650.jpg
+2024-04-02 16:32:45.424 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/b59ee515-1c87-4e56-a858-00eb37327f86_af1-full-white-like-auth-11-650x650.jpg
+2024-04-02 16:32:45.424 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/cd1c656d-c0e4-45aa-be3e-d6be65593b6a_af1-full-white-like-auth-13-650x650.jpg
+2024-04-02 16:32:45.424 [http-nio-8089-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/9a59a80f-44b5-457b-8092-7bc20833520d_Nike-AF1-like-auth-650x650.jpg
+2024-04-02 16:32:45.425 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/6e7c3444-2475-4880-847d-e6754557316e_af1-full-white-like-auth-6-650x650.jpg
+2024-04-02 16:32:45.425 [http-nio-8089-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/9a59a80f-44b5-457b-8092-7bc20833520d_Nike-AF1-like-auth-650x650.jpg
+2024-04-02 16:32:45.425 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/b59ee515-1c87-4e56-a858-00eb37327f86_af1-full-white-like-auth-11-650x650.jpg
+2024-04-02 16:32:45.426 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/cd1c656d-c0e4-45aa-be3e-d6be65593b6a_af1-full-white-like-auth-13-650x650.jpg
+2024-04-02 16:32:45.428 [http-nio-8089-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:45.433 [http-nio-8089-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:45.435 [http-nio-8089-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:45.435 [http-nio-8089-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:47.438 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/all
+2024-04-02 16:32:47.438 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/all
+2024-04-02 16:32:47.527 [http-nio-8089-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:47.535 [http-nio-8089-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/64baf7b5-635b-4a9e-aec7-03d0fedac82f_nike-air-force-1-low-replica-800x600.jpg
+2024-04-02 16:32:47.536 [http-nio-8089-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/64baf7b5-635b-4a9e-aec7-03d0fedac82f_nike-air-force-1-low-replica-800x600.jpg
+2024-04-02 16:32:47.536 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/68c9641a-df79-440d-a7a3-2249e64685db_adidas-superstar-white-replica.jpg
+2024-04-02 16:32:47.537 [http-nio-8089-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/ef350705-89f2-4e37-a293-cec3ec4bf069_af1-cream-black-swoosh-800x600.jpg
+2024-04-02 16:32:47.537 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/ef20dd75-5f3d-4540-aebd-d3a34211e716_Nike-Air-Force-1-Low-G-Dragon-Peaceminusone-Para-Noise-replica-800x600.jpg
+2024-04-02 16:32:47.537 [http-nio-8089-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/ef350705-89f2-4e37-a293-cec3ec4bf069_af1-cream-black-swoosh-800x600.jpg
+2024-04-02 16:32:47.537 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/68c9641a-df79-440d-a7a3-2249e64685db_adidas-superstar-white-replica.jpg
+2024-04-02 16:32:47.537 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/ef20dd75-5f3d-4540-aebd-d3a34211e716_Nike-Air-Force-1-Low-G-Dragon-Peaceminusone-Para-Noise-replica-800x600.jpg
+2024-04-02 16:32:47.539 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/3fdcde54-b611-45ea-b693-e94b6dca086d_af1-gucci-nike-1-800x600.jpg
+2024-04-02 16:32:47.539 [http-nio-8089-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:47.539 [http-nio-8089-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:47.540 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/3fdcde54-b611-45ea-b693-e94b6dca086d_af1-gucci-nike-1-800x600.jpg
+2024-04-02 16:32:47.541 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/dd4e2fcd-9b54-4d89-988a-df9cfda47f55_giay-nike-air-force-1-low-valentines-day-2024-like-auth.jpg
+2024-04-02 16:32:47.541 [http-nio-8089-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:47.542 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/dd4e2fcd-9b54-4d89-988a-df9cfda47f55_giay-nike-air-force-1-low-valentines-day-2024-like-auth.jpg
+2024-04-02 16:32:47.544 [http-nio-8089-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:47.546 [http-nio-8089-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:47.546 [http-nio-8089-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:47.549 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/cd721569-4060-4f22-b63e-6a4fbf3a2d95_Giay-Nike-Air-Jordan-1-Mid-Chicago-White-Toe-800x600.jpg
+2024-04-02 16:32:47.549 [http-nio-8089-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/75b77e09-5ddb-445f-9456-c0d10ac84acb_Air-Jordan-1-Mid-Panda.jpg
+2024-04-02 16:32:47.549 [http-nio-8089-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/75b77e09-5ddb-445f-9456-c0d10ac84acb_Air-Jordan-1-Mid-Panda.jpg
+2024-04-02 16:32:47.549 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/cd721569-4060-4f22-b63e-6a4fbf3a2d95_Giay-Nike-Air-Jordan-1-Mid-Chicago-White-Toe-800x600.jpg
+2024-04-02 16:32:47.551 [http-nio-8089-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/96a4724d-6df3-488c-9ec5-55cb525a921c_Jordan-1-Mid-Light-Smoke-Grey-80.jpg
+2024-04-02 16:32:47.551 [http-nio-8089-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/96a4724d-6df3-488c-9ec5-55cb525a921c_Jordan-1-Mid-Light-Smoke-Grey-80.jpg
+2024-04-02 16:32:47.552 [http-nio-8089-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:47.557 [http-nio-8089-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:47.564 [http-nio-8089-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/0ce3ac5f-fc54-4b7b-afc4-a67be12d06ef_adidas-adidas-samba-classic-white-800x650.jpg
+2024-04-02 16:32:47.569 [http-nio-8089-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/0ce3ac5f-fc54-4b7b-afc4-a67be12d06ef_adidas-adidas-samba-classic-white-800x650.jpg
+2024-04-02 16:32:47.570 [http-nio-8089-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:47.571 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/c2b778a5-4ad6-45c6-a8b4-47f779d23dad_Jordan-1-Mid-Tuxedo-White-Black-800x600.jpg
+2024-04-02 16:32:47.572 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/c2b778a5-4ad6-45c6-a8b4-47f779d23dad_Jordan-1-Mid-Tuxedo-White-Black-800x600.jpg
+2024-04-02 16:32:47.575 [http-nio-8089-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:47.575 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/85c00f76-5962-480e-80b2-cec0bf541a33_adidas-stan-smith-xanh-navy-replica-800x650.jpg
+2024-04-02 16:32:47.575 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/85c00f76-5962-480e-80b2-cec0bf541a33_adidas-stan-smith-xanh-navy-replica-800x650.jpg
+2024-04-02 16:32:47.576 [http-nio-8089-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:32:47.579 [http-nio-8089-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 16:33:16.125 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-02 16:33:16.128 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-02 16:33:16.136 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-02 20:15:27.993 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-04-02 20:15:28.069 [main] INFO  c.e.Sneakers.SneakersApplication - Starting SneakersApplication using Java 18.0.2.1 with PID 4316 (D:\Workspace\Sneakers_BE\Sneakers\target\classes started by dell in D:\Workspace\Sneakers_BE\Sneakers)
+2024-04-02 20:15:28.071 [main] INFO  c.e.Sneakers.SneakersApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-02 20:15:29.500 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-02 20:15:29.624 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 109 ms. Found 8 JPA repository interfaces.
+2024-04-02 20:15:30.778 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8089 (http)
+2024-04-02 20:15:30.806 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+2024-04-02 20:15:30.812 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-02 20:15:30.812 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-04-02 20:15:30.920 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-02 20:15:30.922 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2761 ms
+2024-04-02 20:15:31.238 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-02 20:15:31.363 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-04-02 20:15:31.452 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-02 20:15:31.862 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-02 20:15:31.907 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-02 20:15:33.044 [main] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:276)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:129)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1820)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1769)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:685)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1164)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1684)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1433)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:907)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:785)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1191)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:409)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1164)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:907)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:785)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1191)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:210)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:173)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:168)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:153)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4866)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:845)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:240)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:917)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:488)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:126)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:105)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:499)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:218)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:618)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.Sneakers.SneakersApplication.main(SneakersApplication.java:11)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805)
+	... 143 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:539)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62)
+	... 146 common frames omitted
+2024-04-02 20:15:33.049 [main] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(java.sql.SQLException, String)" because the return value of "org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.sqlExceptionHelper()" is null
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:276)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:129)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1820)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1769)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:685)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1164)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1684)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1433)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:907)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:785)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1191)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:409)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1164)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:907)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:785)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1191)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:210)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:173)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:168)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:153)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4866)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:845)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:240)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:917)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:488)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:126)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:105)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:499)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:218)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:618)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.Sneakers.SneakersApplication.main(SneakersApplication.java:11)
+2024-04-02 20:15:33.079 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-02 20:15:33.081 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-04-02 20:15:34.704 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-02 20:15:34.708 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-02 20:15:35.427 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-02 20:15:35.637 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-02 20:15:37.754 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@47d6d2a7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@61f56074, org.springframework.security.web.context.SecurityContextHolderFilter@5901caf8, org.springframework.security.web.header.HeaderWriterFilter@75c858e6, org.springframework.web.filter.CorsFilter@95d1ba6, org.springframework.security.web.authentication.logout.LogoutFilter@6fec6b75, com.example.Sneakers.filters.JwtTokenFilter@34d0c331, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@18b378a2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3d039fe6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@637798b4, org.springframework.security.web.access.ExceptionTranslationFilter@53b83e49, org.springframework.security.web.access.intercept.AuthorizationFilter@1bbe7fcb]
+2024-04-02 20:15:38.299 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+2024-04-02 20:15:38.339 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8089 (http) with context path ''
+2024-04-02 20:15:38.358 [main] INFO  c.e.Sneakers.SneakersApplication - Started SneakersApplication in 11.029 seconds (process running for 11.974)
+2024-04-02 20:15:48.081 [http-nio-8089-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-02 20:15:48.081 [http-nio-8089-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-02 20:15:48.082 [http-nio-8089-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-04-02 20:15:48.098 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/v1/users/login
+2024-04-02 20:15:48.107 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/v1/users/login
+2024-04-02 20:15:48.325 [http-nio-8089-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-02 20:15:48.410 [http-nio-8089-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@8a7848d
+2024-04-02 20:15:48.411 [http-nio-8089-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-02 20:15:48.751 [http-nio-8089-exec-1] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2024-04-02 20:15:48.799 [http-nio-8089-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-02 20:18:07.160 [http-nio-8089-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/v1/orders
+2024-04-02 20:18:07.254 [http-nio-8089-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/v1/orders
+2024-04-02 21:04:07.851 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-02 21:04:07.904 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-02 21:04:07.917 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
