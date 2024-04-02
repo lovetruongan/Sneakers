@@ -78,7 +78,8 @@ public class CartController {
     ){
         try {
             cartService.deleteCart(id);
-            return ResponseEntity.ok("Cart deleted successfully");
+            ListCartResponse listCartResponse = cartService.getCartsByUserId(token);
+            return ResponseEntity.ok(listCartResponse);
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
@@ -90,7 +91,8 @@ public class CartController {
     ){
         try {
             cartService.deleteCartByUserId(token);
-            return ResponseEntity.ok("Cart deleted successfully");
+            ListCartResponse listCartResponse = cartService.getCartsByUserId(token);
+            return ResponseEntity.ok(listCartResponse);
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
