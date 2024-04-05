@@ -19,13 +19,13 @@ public class OrderDetailResponse {
     private Long productId;
 
     @JsonProperty("price")
-    private Float price;
+    private Long price;
 
     @JsonProperty("number_of_products")
     private Long numberOfProducts;
 
     @JsonProperty("total_money")
-    private Float totalMoney;
+    private Long totalMoney;
 
     private Long size;
     public static OrderDetailResponse fromOrderDetail(OrderDetail orderDetail){

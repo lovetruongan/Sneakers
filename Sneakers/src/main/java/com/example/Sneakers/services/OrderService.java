@@ -8,12 +8,17 @@ import com.example.Sneakers.repositories.OrderDetailRepository;
 import com.example.Sneakers.repositories.OrderRepository;
 import com.example.Sneakers.repositories.ProductRepository;
 import com.example.Sneakers.repositories.UserRepository;
+import com.example.Sneakers.responses.CartResponse;
+import com.example.Sneakers.responses.ListCartResponse;
 import com.example.Sneakers.responses.OrderResponse;
+import com.example.Sneakers.utils.BuilderEmailContent;
+import com.example.Sneakers.utils.Email;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.cglib.core.Local;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -30,29 +35,46 @@ public class OrderService implements IOrderService{
     private final ModelMapper modelMapper;
     private final ProductRepository productRepository;
     private final OrderDetailRepository orderDetailRepository;
+    private final UserService userService;
+    private final CartService cartService;
     @Override
     @Transactional
-    public Order createOrder(OrderDTO orderDTO) throws Exception {
+    public Order createOrder(OrderDTO orderDTO,String token) throws Exception {
         //Tìm xem user id có tồn tại không
-        User user = userRepository.findById(orderDTO.getUserId())
-                .orElseThrow(() -> new DataNotFoundException("Cannot find user with id = " + orderDTO.getUserId()));
+        String extractedToken = token.substring(7); // Loại bỏ "Bearer " từ chuỗi token
+        User user = userService.getUserDetailsFromToken(extractedToken);
         //Convert orderDTO => Order
         //Dùng thư viện Model Mapper
         //Tạo 1 luồng bằng ánh xạ riêng để kiểm soát việc ánh xạ
-        modelMapper.typeMap(OrderDTO.class,Order.class)
-                .addMappings(mapper -> mapper.skip(Order::setId));
-        Order order = new Order();
-        modelMapper.map(orderDTO,order);
-        order.setUser(user);
-        order.setOrderDate(LocalDate.now());
-        order.setStatus(OrderStatus.PENDING);
+//        modelMapper.typeMap(OrderDTO.class,Order.class)
+//                .addMappings(mapper -> mapper.skip(Order::setId));
+        Order order = Order.builder()
+                .user(user)
+                .orderDate(LocalDate.now())
+                .status(OrderStatus.PENDING)
+                .fullName(orderDTO.getFullName())
+                .email(orderDTO.getEmail())
+                .phoneNumber(orderDTO.getPhoneNumber())
+                .address(orderDTO.getAddress())
+                .note(orderDTO.getNote())
+                .totalMoney(orderDTO.getTotalMoney())
+                .shippingMethod(orderDTO.getShippingMethod())
+                .paymentMethod(orderDTO.getPaymentMethod())
+                .active(true)
+                .shippingDate(LocalDate.now().plusDays(3))
+                .build();
+//        modelMapper.map(orderDTO,order);
+//        order.setUser(user);
+//        order.setOrderDate(LocalDate.now());
+//        order.setStatus(OrderStatus.PENDING);
         //Kiểm tra shipping date phải >= hôm nay
-        LocalDate shippingDate = orderDTO.getShippingDate() == null ? LocalDate.now() : orderDTO.getShippingDate();
-        if(shippingDate.isBefore(LocalDate.now())){
-            throw new DataNotFoundException("Date must be at least today !");
-        }
-        order.setActive(true);
-        order.setShippingDate(shippingDate);
+//        LocalDate shippingDate = orderDTO.getShippingDate() == null ? LocalDate.now() : orderDTO.getShippingDate();
+//        if(shippingDate.isBefore(LocalDate.now())){
+//            throw new DataNotFoundException("Date must be at least today !");
+//        }
+//        order.setActive(true);
+//        order.setShippingDate(shippingDate);
+
         orderRepository.save(order);
 
         // Tạo danh sách các đối tượng OrderDetail từ cartItems
@@ -82,10 +104,16 @@ public class OrderService implements IOrderService{
             // Thêm OrderDetail vào danh sách
             orderDetails.add(orderDetail);
         }
-
+        order.setOrderDetails(orderDetails);
 
         // Lưu danh sách OrderDetail vào cơ sở dữ liệu
         orderDetailRepository.saveAll(orderDetails);
+        Email email = new Email();
+        String to = order.getEmail();
+        String subject = "Đặt hàng thành công từ Sneaker Store";
+        String content = BuilderEmailContent.buildOrderEmailContent(order);
+        boolean sendMail = email.sendEmail(to,subject,content);
+
         return order;
     }
 

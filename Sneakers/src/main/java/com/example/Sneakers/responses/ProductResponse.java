@@ -22,7 +22,7 @@ public class ProductResponse extends BaseResponse{
 
     private String name;
 
-    private Float price;
+    private Long price;
 
     private String thumbnail;
 

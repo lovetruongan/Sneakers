@@ -46,19 +46,13 @@ public class Order {
     private String status;
 
     @Column(name = "total_money")
-    private Float totalMoney;
+    private Long totalMoney;
 
     @Column(name = "shipping_method")
     private String shippingMethod;
 
-    @Column(name = "shipping_address")
-    private String shippingAddress;
-
     @Column(name = "shipping_date")
     private LocalDate shippingDate;
-
-    @Column(name = "tracking_number")
-    private String trackingNumber;
 
     @Column(name = "payment_method")
     private String paymentMethod;

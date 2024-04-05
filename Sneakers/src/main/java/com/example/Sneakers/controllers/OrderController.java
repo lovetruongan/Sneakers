@@ -30,13 +30,14 @@ public class OrderController {
     @PostMapping("")
     public ResponseEntity<?> createOrder(
             @Valid @RequestBody OrderDTO orderDTO,
+            @RequestHeader("Authorization") String token,
             BindingResult result){
         try {
             if(result.hasErrors()){
                 List<String> errorMessages = result.getFieldErrors().stream().map(FieldError::getDefaultMessage).toList();
                 return ResponseEntity.badRequest().body(errorMessages);
             }
-            Order orderResponse = orderService.createOrder(orderDTO);
+            Order orderResponse = orderService.createOrder(orderDTO,token);
             return ResponseEntity.ok(orderResponse);
         }
         catch (Exception e ){

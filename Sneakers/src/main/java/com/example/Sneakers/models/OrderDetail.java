@@ -26,13 +26,13 @@ public class OrderDetail {
     private Product product;
 
     @Column(name = "price",nullable = false)
-    private Float price;
+    private Long price;
 
     @Column(name = "number_of_products",nullable = false)
     private Long numberOfProducts;
 
     @Column(name = "total_money",nullable = false)
-    private Float totalMoney;
+    private Long totalMoney;
 
     private Long size;
 }

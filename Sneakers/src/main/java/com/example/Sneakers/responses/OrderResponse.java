@@ -79,7 +79,6 @@ public class OrderResponse {
                 .status(order.getStatus())
                 .totalMoney(order.getTotalMoney())
                 .shippingMethod(order.getShippingMethod())
-                .shippingAddress(order.getShippingAddress())
                 .shippingDate(order.getShippingDate())
                 .paymentMethod(order.getPaymentMethod())
                 .orderDetails(order.getOrderDetails())
