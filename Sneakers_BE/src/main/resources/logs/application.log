@@ -17850,3 +17850,133 @@ java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.Sql
 2024-04-05 23:29:25.605 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-04-05 23:29:25.610 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2024-04-05 23:29:25.619 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-06 23:49:02.037 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-04-06 23:49:02.070 [main] INFO  c.e.Sneakers.SneakersApplication - Starting SneakersApplication using Java 21 with PID 24660 (C:\Sneaker_BE\Sneakers_BE\Sneakers_BE\target\classes started by MSI in C:\Sneaker_BE\Sneakers_BE\Sneakers_BE)
+2024-04-06 23:49:02.071 [main] INFO  c.e.Sneakers.SneakersApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-06 23:49:02.775 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-06 23:49:02.858 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 75 ms. Found 8 JPA repository interfaces.
+2024-04-06 23:49:03.602 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8089 (http)
+2024-04-06 23:49:03.615 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+2024-04-06 23:49:03.618 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-06 23:49:03.618 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-04-06 23:49:03.680 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-06 23:49:03.681 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1569 ms
+2024-04-06 23:49:03.882 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-06 23:49:03.943 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-04-06 23:49:03.974 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-06 23:49:04.208 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-06 23:49:04.235 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-06 23:49:04.373 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@118cbded
+2024-04-06 23:49:04.374 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-06 23:49:04.392 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-06 23:49:04.393 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-04-06 23:49:05.279 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-06 23:49:05.281 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-06 23:49:05.617 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-06 23:49:05.732 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-06 23:49:06.784 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@431a9a71, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3e62fe4d, org.springframework.security.web.context.SecurityContextHolderFilter@7ab7a4eb, org.springframework.security.web.header.HeaderWriterFilter@664c47f2, org.springframework.web.filter.CorsFilter@325e1229, org.springframework.security.web.authentication.logout.LogoutFilter@fd10007, com.example.Sneakers.filters.JwtTokenFilter@589a4305, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@67b68dc3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5922338f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@396eceda, org.springframework.security.web.access.ExceptionTranslationFilter@697ea6b2, org.springframework.security.web.access.intercept.AuthorizationFilter@562b4373]
+2024-04-06 23:49:07.053 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+2024-04-06 23:49:07.095 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8089 (http) with context path ''
+2024-04-06 23:49:07.102 [main] INFO  c.e.Sneakers.SneakersApplication - Started SneakersApplication in 5.384 seconds (process running for 5.887)
+2024-04-06 23:49:11.303 [http-nio-8089-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-06 23:49:11.303 [http-nio-8089-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-06 23:49:11.304 [http-nio-8089-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-04-06 23:49:11.317 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/categories
+2024-04-06 23:49:11.317 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/all
+2024-04-06 23:49:11.325 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/categories
+2024-04-06 23:49:11.325 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/all
+2024-04-06 23:49:11.493 [http-nio-8089-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:11.604 [http-nio-8089-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:11.654 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/64baf7b5-635b-4a9e-aec7-03d0fedac82f_nike-air-force-1-low-replica-800x600.jpg
+2024-04-06 23:49:11.655 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/64baf7b5-635b-4a9e-aec7-03d0fedac82f_nike-air-force-1-low-replica-800x600.jpg
+2024-04-06 23:49:11.675 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/68c9641a-df79-440d-a7a3-2249e64685db_adidas-superstar-white-replica.jpg
+2024-04-06 23:49:11.676 [http-nio-8089-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:11.676 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/68c9641a-df79-440d-a7a3-2249e64685db_adidas-superstar-white-replica.jpg
+2024-04-06 23:49:11.688 [http-nio-8089-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:11.785 [http-nio-8089-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/ef350705-89f2-4e37-a293-cec3ec4bf069_af1-cream-black-swoosh-800x600.jpg
+2024-04-06 23:49:11.785 [http-nio-8089-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/ef20dd75-5f3d-4540-aebd-d3a34211e716_Nike-Air-Force-1-Low-G-Dragon-Peaceminusone-Para-Noise-replica-800x600.jpg
+2024-04-06 23:49:11.785 [http-nio-8089-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/ef350705-89f2-4e37-a293-cec3ec4bf069_af1-cream-black-swoosh-800x600.jpg
+2024-04-06 23:49:11.785 [http-nio-8089-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/ef20dd75-5f3d-4540-aebd-d3a34211e716_Nike-Air-Force-1-Low-G-Dragon-Peaceminusone-Para-Noise-replica-800x600.jpg
+2024-04-06 23:49:11.786 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/3fdcde54-b611-45ea-b693-e94b6dca086d_af1-gucci-nike-1-800x600.jpg
+2024-04-06 23:49:11.786 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/3fdcde54-b611-45ea-b693-e94b6dca086d_af1-gucci-nike-1-800x600.jpg
+2024-04-06 23:49:11.787 [http-nio-8089-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/dd4e2fcd-9b54-4d89-988a-df9cfda47f55_giay-nike-air-force-1-low-valentines-day-2024-like-auth.jpg
+2024-04-06 23:49:11.787 [http-nio-8089-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/dd4e2fcd-9b54-4d89-988a-df9cfda47f55_giay-nike-air-force-1-low-valentines-day-2024-like-auth.jpg
+2024-04-06 23:49:11.788 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/cd721569-4060-4f22-b63e-6a4fbf3a2d95_Giay-Nike-Air-Jordan-1-Mid-Chicago-White-Toe-800x600.jpg
+2024-04-06 23:49:11.789 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/cd721569-4060-4f22-b63e-6a4fbf3a2d95_Giay-Nike-Air-Jordan-1-Mid-Chicago-White-Toe-800x600.jpg
+2024-04-06 23:49:11.800 [http-nio-8089-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/75b77e09-5ddb-445f-9456-c0d10ac84acb_Air-Jordan-1-Mid-Panda.jpg
+2024-04-06 23:49:11.801 [http-nio-8089-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:11.801 [http-nio-8089-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:11.801 [http-nio-8089-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/75b77e09-5ddb-445f-9456-c0d10ac84acb_Air-Jordan-1-Mid-Panda.jpg
+2024-04-06 23:49:11.802 [http-nio-8089-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:11.803 [http-nio-8089-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:11.806 [http-nio-8089-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:11.814 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/96a4724d-6df3-488c-9ec5-55cb525a921c_Jordan-1-Mid-Light-Smoke-Grey-80.jpg
+2024-04-06 23:49:11.814 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/c2b778a5-4ad6-45c6-a8b4-47f779d23dad_Jordan-1-Mid-Tuxedo-White-Black-800x600.jpg
+2024-04-06 23:49:11.815 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/c2b778a5-4ad6-45c6-a8b4-47f779d23dad_Jordan-1-Mid-Tuxedo-White-Black-800x600.jpg
+2024-04-06 23:49:11.815 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/96a4724d-6df3-488c-9ec5-55cb525a921c_Jordan-1-Mid-Light-Smoke-Grey-80.jpg
+2024-04-06 23:49:11.816 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/0ce3ac5f-fc54-4b7b-afc4-a67be12d06ef_adidas-adidas-samba-classic-white-800x650.jpg
+2024-04-06 23:49:11.816 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/85c00f76-5962-480e-80b2-cec0bf541a33_adidas-stan-smith-xanh-navy-replica-800x650.jpg
+2024-04-06 23:49:11.816 [http-nio-8089-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:11.817 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/0ce3ac5f-fc54-4b7b-afc4-a67be12d06ef_adidas-adidas-samba-classic-white-800x650.jpg
+2024-04-06 23:49:11.817 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/85c00f76-5962-480e-80b2-cec0bf541a33_adidas-stan-smith-xanh-navy-replica-800x650.jpg
+2024-04-06 23:49:11.830 [http-nio-8089-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:11.830 [http-nio-8089-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:11.830 [http-nio-8089-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:11.830 [http-nio-8089-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:11.892 [http-nio-8089-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/64baf7b5-635b-4a9e-aec7-03d0fedac82f_nike-air-force-1-low-replica-800x600.jpg
+2024-04-06 23:49:11.892 [http-nio-8089-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/68c9641a-df79-440d-a7a3-2249e64685db_adidas-superstar-white-replica.jpg
+2024-04-06 23:49:11.892 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/ef20dd75-5f3d-4540-aebd-d3a34211e716_Nike-Air-Force-1-Low-G-Dragon-Peaceminusone-Para-Noise-replica-800x600.jpg
+2024-04-06 23:49:11.892 [http-nio-8089-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/ef350705-89f2-4e37-a293-cec3ec4bf069_af1-cream-black-swoosh-800x600.jpg
+2024-04-06 23:49:11.892 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/3fdcde54-b611-45ea-b693-e94b6dca086d_af1-gucci-nike-1-800x600.jpg
+2024-04-06 23:49:11.893 [http-nio-8089-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/68c9641a-df79-440d-a7a3-2249e64685db_adidas-superstar-white-replica.jpg
+2024-04-06 23:49:11.893 [http-nio-8089-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/64baf7b5-635b-4a9e-aec7-03d0fedac82f_nike-air-force-1-low-replica-800x600.jpg
+2024-04-06 23:49:11.893 [http-nio-8089-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/ef350705-89f2-4e37-a293-cec3ec4bf069_af1-cream-black-swoosh-800x600.jpg
+2024-04-06 23:49:11.893 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/3fdcde54-b611-45ea-b693-e94b6dca086d_af1-gucci-nike-1-800x600.jpg
+2024-04-06 23:49:11.893 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/ef20dd75-5f3d-4540-aebd-d3a34211e716_Nike-Air-Force-1-Low-G-Dragon-Peaceminusone-Para-Noise-replica-800x600.jpg
+2024-04-06 23:49:11.897 [http-nio-8089-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:11.897 [http-nio-8089-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:11.897 [http-nio-8089-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:11.897 [http-nio-8089-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:11.897 [http-nio-8089-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:12.163 [http-nio-8089-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/v1/users/details
+2024-04-06 23:49:12.170 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/users/details
+2024-04-06 23:49:12.179 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/68c9641a-df79-440d-a7a3-2249e64685db_adidas-superstar-white-replica.jpg
+2024-04-06 23:49:12.179 [http-nio-8089-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/ef20dd75-5f3d-4540-aebd-d3a34211e716_Nike-Air-Force-1-Low-G-Dragon-Peaceminusone-Para-Noise-replica-800x600.jpg
+2024-04-06 23:49:12.179 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/ef350705-89f2-4e37-a293-cec3ec4bf069_af1-cream-black-swoosh-800x600.jpg
+2024-04-06 23:49:12.179 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/64baf7b5-635b-4a9e-aec7-03d0fedac82f_nike-air-force-1-low-replica-800x600.jpg
+2024-04-06 23:49:12.180 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/ef350705-89f2-4e37-a293-cec3ec4bf069_af1-cream-black-swoosh-800x600.jpg
+2024-04-06 23:49:12.180 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/68c9641a-df79-440d-a7a3-2249e64685db_adidas-superstar-white-replica.jpg
+2024-04-06 23:49:12.180 [http-nio-8089-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/ef20dd75-5f3d-4540-aebd-d3a34211e716_Nike-Air-Force-1-Low-G-Dragon-Peaceminusone-Para-Noise-replica-800x600.jpg
+2024-04-06 23:49:12.180 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/64baf7b5-635b-4a9e-aec7-03d0fedac82f_nike-air-force-1-low-replica-800x600.jpg
+2024-04-06 23:49:12.181 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/3fdcde54-b611-45ea-b693-e94b6dca086d_af1-gucci-nike-1-800x600.jpg
+2024-04-06 23:49:12.181 [http-nio-8089-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/3fdcde54-b611-45ea-b693-e94b6dca086d_af1-gucci-nike-1-800x600.jpg
+2024-04-06 23:49:12.183 [http-nio-8089-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:12.183 [http-nio-8089-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:12.183 [http-nio-8089-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:12.183 [http-nio-8089-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:12.183 [http-nio-8089-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:12.189 [http-nio-8089-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/dd4e2fcd-9b54-4d89-988a-df9cfda47f55_giay-nike-air-force-1-low-valentines-day-2024-like-auth.jpg
+2024-04-06 23:49:12.189 [http-nio-8089-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/cd721569-4060-4f22-b63e-6a4fbf3a2d95_Giay-Nike-Air-Jordan-1-Mid-Chicago-White-Toe-800x600.jpg
+2024-04-06 23:49:12.189 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/75b77e09-5ddb-445f-9456-c0d10ac84acb_Air-Jordan-1-Mid-Panda.jpg
+2024-04-06 23:49:12.189 [http-nio-8089-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/96a4724d-6df3-488c-9ec5-55cb525a921c_Jordan-1-Mid-Light-Smoke-Grey-80.jpg
+2024-04-06 23:49:12.189 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/c2b778a5-4ad6-45c6-a8b4-47f779d23dad_Jordan-1-Mid-Tuxedo-White-Black-800x600.jpg
+2024-04-06 23:49:12.189 [http-nio-8089-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/cd721569-4060-4f22-b63e-6a4fbf3a2d95_Giay-Nike-Air-Jordan-1-Mid-Chicago-White-Toe-800x600.jpg
+2024-04-06 23:49:12.189 [http-nio-8089-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/96a4724d-6df3-488c-9ec5-55cb525a921c_Jordan-1-Mid-Light-Smoke-Grey-80.jpg
+2024-04-06 23:49:12.189 [http-nio-8089-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/75b77e09-5ddb-445f-9456-c0d10ac84acb_Air-Jordan-1-Mid-Panda.jpg
+2024-04-06 23:49:12.189 [http-nio-8089-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/dd4e2fcd-9b54-4d89-988a-df9cfda47f55_giay-nike-air-force-1-low-valentines-day-2024-like-auth.jpg
+2024-04-06 23:49:12.189 [http-nio-8089-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/c2b778a5-4ad6-45c6-a8b4-47f779d23dad_Jordan-1-Mid-Tuxedo-White-Black-800x600.jpg
+2024-04-06 23:49:12.192 [http-nio-8089-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:12.192 [http-nio-8089-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:12.192 [http-nio-8089-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:12.192 [http-nio-8089-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:12.192 [http-nio-8089-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:12.197 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/0ce3ac5f-fc54-4b7b-afc4-a67be12d06ef_adidas-adidas-samba-classic-white-800x650.jpg
+2024-04-06 23:49:12.197 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/products/images/85c00f76-5962-480e-80b2-cec0bf541a33_adidas-stan-smith-xanh-navy-replica-800x650.jpg
+2024-04-06 23:49:12.197 [http-nio-8089-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/85c00f76-5962-480e-80b2-cec0bf541a33_adidas-stan-smith-xanh-navy-replica-800x650.jpg
+2024-04-06 23:49:12.197 [http-nio-8089-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/products/images/0ce3ac5f-fc54-4b7b-afc4-a67be12d06ef_adidas-adidas-samba-classic-white-800x650.jpg
+2024-04-06 23:49:12.199 [http-nio-8089-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:12.199 [http-nio-8089-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-04-06 23:49:12.281 [http-nio-8089-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/users/details
+2024-04-07 00:08:21.542 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-07 00:08:21.544 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-07 00:08:21.550 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
