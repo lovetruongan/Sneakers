@@ -16,8 +16,8 @@
 
 
 -- Dumping database structure for shopsneaker
-CREATE DATABASE IF NOT EXISTS `shopsneaker3` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
-USE `shopsneaker3`;
+CREATE DATABASE IF NOT EXISTS `shopsneaker` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+USE `shopsneaker`;
 
 
 

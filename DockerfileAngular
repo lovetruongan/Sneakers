@@ -4,14 +4,14 @@ FROM node:20-alpine3.17 AS builder
 WORKDIR /app
 
 # Copy the package.json and yarn.lock files
-COPY ./Sneaker_FE/package.json ./package.json
-COPY ./Sneaker_FE/yarn.lock ./yarn.lock
+COPY ./Sneakers-Web/package.json ./package.json
+COPY ./Sneakers-Web/yarn.lock ./yarn.lock
 
 # Install dependencies using yarn
 RUN yarn install --frozen-lockfile
 
 # Copy the rest of the app's code excluding node_modules
-COPY ./Sneaker_FE/ .
+COPY ./Sneakers-Web/ .
 
 # Build the Angular app in production mode
 RUN yarn build
@@ -28,8 +28,4 @@ EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 
 #docker build -t sneaker_fe:1.0.0 -f DockerfileAngular .
-#docker login
-#create sunlight4d/shopapp-angular:1.0.0 repository on DockerHub
-#docker tag shopapp-angular:1.0.0 sunlight4d/shopapp-angular:1.0.0
-#docker push sunlight4d/shopapp-angular:1.0.0
-#docker build -t sneaker_fe:1.1.1 -f DockerfileTest .
+#docker run -p 8080:80 sneaker_fe:1.0.0
