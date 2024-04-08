@@ -3,6 +3,8 @@ package com.example.Sneakers.controllers;
 import com.example.Sneakers.components.LocalizationUtils;
 import com.example.Sneakers.dtos.OrderDTO;
 import com.example.Sneakers.models.Order;
+import com.example.Sneakers.responses.OrderHistoryResponse;
+import com.example.Sneakers.responses.OrderIdResponse;
 import com.example.Sneakers.responses.OrderListResponse;
 import com.example.Sneakers.responses.OrderResponse;
 import com.example.Sneakers.services.IOrderService;
@@ -37,17 +39,18 @@ public class OrderController {
                 List<String> errorMessages = result.getFieldErrors().stream().map(FieldError::getDefaultMessage).toList();
                 return ResponseEntity.badRequest().body(errorMessages);
             }
-            Order orderResponse = orderService.createOrder(orderDTO,token);
+            OrderIdResponse orderResponse = orderService.createOrder(orderDTO,token);
             return ResponseEntity.ok(orderResponse);
         }
         catch (Exception e ){
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
-    @GetMapping("/user/{user_id}")
-    public ResponseEntity<?> getOrders(@Valid @PathVariable("user_id") Long userId){
+    @GetMapping("/user")
+    public ResponseEntity<?> getOrdersByUser(
+            @RequestHeader("Authorization") String token){
         try {
-            List<Order> orders = orderService.findByUserId(userId);
+            List<OrderHistoryResponse> orders = orderService.findByUserId(token);
             return ResponseEntity.ok(orders);
         }
         catch (Exception e ){
@@ -55,22 +58,36 @@ public class OrderController {
         }
     }
     @GetMapping("/{id}")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<?> getOrder(@Valid @PathVariable("id") Long orderId){
         try {
-            Order existingOrder = orderService.getOrder(orderId);
-            return ResponseEntity.ok(OrderResponse.fromOrder(existingOrder));
+            OrderResponse existingOrder = orderService.getOrder(orderId);
+            return ResponseEntity.ok((existingOrder));
         }
         catch (Exception e ){
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
+    @GetMapping("/user/{id}")
+    public ResponseEntity<?> getOrderByIdAndUser(
+            @Valid @PathVariable("id") Long orderId,
+            @RequestHeader("Authorization") String token){
+        try {
+            OrderResponse existingOrder = orderService.getOrderByUser(orderId,token);
+            return ResponseEntity.ok((existingOrder));
+        }
+        catch (Exception e ){
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
     @PutMapping("/{id}")
     public ResponseEntity<?> updateOrder(
             @Valid @PathVariable Long id,
             @Valid @RequestBody OrderDTO orderDTO){
         try {
             Order order = orderService.updateOrder(id,orderDTO);
-            return ResponseEntity.ok(order);
+            return ResponseEntity.ok(OrderResponse.fromOrder(order));
         }
         catch (Exception e ){
             return ResponseEntity.badRequest().body(e.getMessage());

@@ -8,9 +8,7 @@ import com.example.Sneakers.repositories.OrderDetailRepository;
 import com.example.Sneakers.repositories.OrderRepository;
 import com.example.Sneakers.repositories.ProductRepository;
 import com.example.Sneakers.repositories.UserRepository;
-import com.example.Sneakers.responses.CartResponse;
-import com.example.Sneakers.responses.ListCartResponse;
-import com.example.Sneakers.responses.OrderResponse;
+import com.example.Sneakers.responses.*;
 import com.example.Sneakers.utils.BuilderEmailContent;
 import com.example.Sneakers.utils.Email;
 import lombok.RequiredArgsConstructor;
@@ -26,6 +24,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -39,10 +38,14 @@ public class OrderService implements IOrderService{
     private final CartService cartService;
     @Override
     @Transactional
-    public Order createOrder(OrderDTO orderDTO,String token) throws Exception {
+    public OrderIdResponse createOrder(OrderDTO orderDTO, String token) throws Exception {
         //Tìm xem user id có tồn tại không
         String extractedToken = token.substring(7); // Loại bỏ "Bearer " từ chuỗi token
         User user = userService.getUserDetailsFromToken(extractedToken);
+        // Kiểm tra xem cartItems có trống không
+        if (orderDTO.getCartItems() == null || orderDTO.getCartItems().isEmpty()) {
+            throw new Exception("Cart items are null or empty");
+        }
         //Convert orderDTO => Order
         //Dùng thư viện Model Mapper
         //Tạo 1 luồng bằng ánh xạ riêng để kiểm soát việc ánh xạ
@@ -114,12 +117,25 @@ public class OrderService implements IOrderService{
         String content = BuilderEmailContent.buildOrderEmailContent(order);
         boolean sendMail = email.sendEmail(to,subject,content);
 
-        return order;
+        return OrderIdResponse.fromOrder(order);
     }
 
     @Override
-    public Order getOrder(Long id) {
-        return orderRepository.findById(id).orElse(null);
+    public OrderResponse getOrder(Long id) {
+        Order order = orderRepository.findById(id).orElse(null);
+        return OrderResponse.fromOrder(order);
+    }
+
+    @Override
+    public OrderResponse getOrderByUser(Long orderId, String token) throws Exception {
+        String extractedToken = token.substring(7);
+        User user = userService.getUserDetailsFromToken(extractedToken);
+
+        Order order = orderRepository.findById(orderId).orElse(null);
+        if(!user.getId().equals(order.getUser().getId())){
+            throw new Exception("Cannot get order of another user");
+        }
+        return OrderResponse.fromOrder(order);
     }
 
     @Override
@@ -149,8 +165,12 @@ public class OrderService implements IOrderService{
     }
 
     @Override
-    public List<Order> findByUserId(Long userId) {
-        return orderRepository.findByUserId(userId);
+    public List<OrderHistoryResponse> findByUserId(String token) throws Exception {
+        String extractedToken = token.substring(7);
+        User user = userService.getUserDetailsFromToken(extractedToken);
+        List<Order> orders = orderRepository.findByUserId(user.getId());
+        return orders.stream().map(OrderHistoryResponse::fromOrder)
+                .collect(Collectors.toList());
     }
 
     @Override

@@ -20,6 +20,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Objects;
 
 @RestController
 @RequestMapping("${api.prefix}/users")
@@ -98,7 +99,7 @@ public class UserController {
             String extractedToken = authorizationHeader.substring(7);
             User user = userService.getUserDetailsFromToken(extractedToken);
             // Ensure that the user making the request matches the user being updated
-            if (user.getId() != userId) {
+            if (!Objects.equals(user.getId(), userId)) {
                 return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
             }
             User updatedUser = userService.updateUser(userId, updatedUserDTO);
