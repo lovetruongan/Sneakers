@@ -66,8 +66,8 @@ services:
 
 
 #docker-compose -f ./deployment.yaml rm -s -f sneaker-spring-container 
-#docker-compose -f ./deployment.yaml up -d s-spring-container 
-#docker logs shopapp-spring-container
+#docker-compose -f ./deployment.yaml up -d sneaker-spring-container
+
 
 #docker-compose -f ./deployment.yaml rm -s -f sneaker-angular-container
 #docker-compose -f ./deployment.yaml up -d sneaker-angular-container
