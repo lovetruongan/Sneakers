@@ -51,6 +51,12 @@ public class OrderService implements IOrderService{
         //Tạo 1 luồng bằng ánh xạ riêng để kiểm soát việc ánh xạ
 //        modelMapper.typeMap(OrderDTO.class,Order.class)
 //                .addMappings(mapper -> mapper.skip(Order::setId));
+        Long shippingCost = switch (orderDTO.getShippingMethod()) {
+            case "Tiêu chuẩn" -> 30000L;
+            case "Nhanh" -> 40000L;
+            case "Hỏa tốc" -> 60000L;
+            default -> throw new Exception("Shipping method is unavailable");
+        };
         Order order = Order.builder()
                 .user(user)
                 .orderDate(LocalDate.now())
@@ -60,9 +66,9 @@ public class OrderService implements IOrderService{
                 .phoneNumber(orderDTO.getPhoneNumber())
                 .address(orderDTO.getAddress())
                 .note(orderDTO.getNote())
-                .totalMoney(orderDTO.getTotalMoney())
                 .shippingMethod(orderDTO.getShippingMethod())
                 .paymentMethod(orderDTO.getPaymentMethod())
+                .totalMoney(orderDTO.getTotalMoney()+shippingCost)
                 .active(true)
                 .shippingDate(LocalDate.now().plusDays(3))
                 .build();
@@ -113,10 +119,13 @@ public class OrderService implements IOrderService{
         orderDetailRepository.saveAll(orderDetails);
         Email email = new Email();
         String to = order.getEmail();
-        String subject = "Đặt hàng thành công từ Sneaker Store";
+        String subject = "Đặt hàng thành công từ Sneaker Store - Đơn hàng #" + order.getId();
         String content = BuilderEmailContent.buildOrderEmailContent(order);
         boolean sendMail = email.sendEmail(to,subject,content);
 
+        if(!sendMail){
+            throw new Exception("Cannot send email");
+        }
         return OrderIdResponse.fromOrder(order);
     }
 

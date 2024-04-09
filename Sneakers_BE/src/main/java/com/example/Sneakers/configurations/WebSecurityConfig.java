@@ -110,13 +110,13 @@ public class WebSecurityConfig {
                                     String.format("%s/order_details/**", apiPrefix)).hasRole(Role.ADMIN)
 
                             .requestMatchers(POST,
-                                    String.format("%s/carts/**", apiPrefix)).hasRole(Role.USER)
+                                    String.format("%s/carts**", apiPrefix)).hasRole(Role.USER)
 
                             .requestMatchers(GET,
-                                    String.format("%s/carts/**", apiPrefix)).permitAll()
+                                    String.format("%s/carts**", apiPrefix)).permitAll()
 
                             .requestMatchers(PUT,
-                                    String.format("%s/carts/**", apiPrefix)).hasRole(Role.USER)
+                                    String.format("%s/carts**", apiPrefix)).hasRole(Role.USER)
 
                             .requestMatchers(DELETE,
                                     String.format("%s/carts/**", apiPrefix)).hasRole(Role.USER)
