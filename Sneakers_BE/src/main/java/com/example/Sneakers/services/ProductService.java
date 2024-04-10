@@ -21,6 +21,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -171,10 +172,20 @@ public class ProductService implements IProductService{
     @Override
     public ListProductResponse getRelatedProducts(Long productId) throws Exception {
         Product product = getProductById(productId);
-        List<Product> products = productRepository.getRelatedProducts(product.getCategory().getId(),PageRequest.of(0, 4));
+        Optional<Product> optionalProduct = productRepository.findById(productId);
         List<ProductResponse> productResponses = new ArrayList<>();
+        if(optionalProduct.isEmpty()){
+            throw new Exception("Cannot find product with id = " + productId);
+        }
+        List<Product> products = productRepository.getProductsByCategory(
+                                    optionalProduct.get().getCategory().getId());
+        int cnt = 0;
         for(Product p : products){
-            productResponses.add(ProductResponse.fromProduct(p));
+            if(!Objects.equals(p.getId(), productId)){
+                productResponses.add(ProductResponse.fromProduct(p));
+                cnt++;
+            }
+            if(cnt==4) break;
         }
         return ListProductResponse.builder()
                 .products(productResponses)

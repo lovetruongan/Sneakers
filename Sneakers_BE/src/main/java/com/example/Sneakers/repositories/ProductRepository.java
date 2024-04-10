@@ -46,10 +46,4 @@ public interface ProductRepository extends JpaRepository<Product,Long> {
             "WHERE (:categoryId IS NULL OR :categoryId = 0 OR p.category.id = :categoryId)")
     List<Product> getProductsByCategory(
             @Param("categoryId") Long categoryId);
-
-    @Query("SELECT p FROM Product p " +
-            "WHERE p.category.id = (SELECT p2.category.id FROM Product p2 WHERE p2.id = :productId) " +
-            "AND p.id != :productId")
-    List<Product> getRelatedProducts(@Param("productId") Long productId, Pageable pageable);
-
 }
