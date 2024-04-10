@@ -48,13 +48,10 @@ public class OrderResponse {
     private String status;
 
     @JsonProperty("total_money")
-    private double totalMoney;
+    private Long totalMoney;
 
     @JsonProperty("shipping_method")
     private String shippingMethod;
-
-    @JsonProperty("shipping_address")
-    private String shippingAddress;
 
     @JsonProperty("shipping_date")
     private LocalDate shippingDate;
@@ -66,7 +63,7 @@ public class OrderResponse {
     private List<OrderDetail> orderDetails;
 
     public static OrderResponse fromOrder(Order order) {
-        OrderResponse orderResponse =  OrderResponse
+        return OrderResponse
                 .builder()
                 .id(order.getId())
                 .userId(order.getUser().getId())
@@ -83,6 +80,5 @@ public class OrderResponse {
                 .paymentMethod(order.getPaymentMethod())
                 .orderDetails(order.getOrderDetails())
                 .build();
-        return orderResponse;
     }
 }
