@@ -192,6 +192,4 @@ public class ProductService implements IProductService{
                 .totalProducts(productResponses.size())
                 .build();
     }
-
-
 }

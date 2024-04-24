@@ -22,6 +22,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -263,9 +264,11 @@ public class ProductController {
     }
 
     @PutMapping("/{id}")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<?> updateProduct(
             @PathVariable Long id,
-            @RequestBody ProductDTO productDTO){
+            @RequestBody ProductDTO productDTO,
+            @RequestHeader("Authorization") String authorizationHeader){
         try {
             Product updatedProduct = productService.updateProduct(id,productDTO);
             return ResponseEntity.ok(ProductResponse.fromProduct(updatedProduct));
@@ -275,7 +278,10 @@ public class ProductController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteProduct(@PathVariable Long id){
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public ResponseEntity<String> deleteProduct(
+            @PathVariable Long id,
+            @RequestHeader("Authorization") String authorizationHeader){
         try {
             productService.deleteProduct(id);
             return ResponseEntity.ok("Product with id = " + id + " deleted successfully");

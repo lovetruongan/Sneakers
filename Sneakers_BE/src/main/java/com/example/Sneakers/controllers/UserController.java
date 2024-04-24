@@ -58,8 +58,7 @@ public class UserController {
     }
     @PostMapping("/login")
     public ResponseEntity<?>login(
-            @Valid @RequestBody UserLoginDTO userLoginDTO,
-            HttpServletRequest request){
+            @Valid @RequestBody UserLoginDTO userLoginDTO){
         try {
             String token = userService.login(
                     userLoginDTO.getPhoneNumber(),

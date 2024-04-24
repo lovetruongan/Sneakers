@@ -79,7 +79,6 @@ public class UserService implements IUserService{
         if(optionalUser.isEmpty()) {
             throw new DataNotFoundException(localizationUtils.getLocalizedMessage(MessageKeys.WRONG_PHONE_PASSWORD));
         }
-        //return optionalUser.get();//muốn trả JWT token ?
         User existingUser = optionalUser.get();
         //check password
         if (existingUser.getFacebookAccountId() == 0
