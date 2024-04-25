@@ -5,6 +5,7 @@ import com.example.Sneakers.models.Category;
 import com.example.Sneakers.repositories.CategoryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -13,7 +14,11 @@ import java.util.List;
 public class CategoryService implements ICategoryServices{
     private final CategoryRepository categoryRepository;
     @Override
-    public Category createCategory(CategoryDTO category) {
+    @Transactional
+    public Category createCategory(CategoryDTO category) throws Exception {
+        if(categoryRepository.existsByName(category.getName())){
+            throw new Exception("Category exists already");
+        }
         Category newCategory = Category.builder()
                 .name(category.getName())
                 .build();

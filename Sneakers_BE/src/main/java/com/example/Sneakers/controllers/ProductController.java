@@ -8,6 +8,7 @@ import com.example.Sneakers.models.ProductImage;
 import com.example.Sneakers.responses.ListProductResponse;
 import com.example.Sneakers.responses.ProductListResponse;
 import com.example.Sneakers.responses.ProductResponse;
+import com.example.Sneakers.responses.UploadProductResponse;
 import com.example.Sneakers.services.IProductService;
 import com.example.Sneakers.utils.MessageKeys;
 import com.github.javafaker.Faker;
@@ -45,8 +46,10 @@ public class ProductController {
     private final IProductService productService;
     private final LocalizationUtils localizationUtils;
     @PostMapping("")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<?> createProduct(
             @Valid @RequestBody ProductDTO productDTO,
+            @RequestHeader("Authorization") String authorizationHeader,
             BindingResult result
             ){
         try {
@@ -55,7 +58,11 @@ public class ProductController {
                 return ResponseEntity.badRequest().body(errorMessages);
             }
             Product newProduct = productService.createProduct(productDTO);
-            return ResponseEntity.ok(newProduct);
+            return ResponseEntity.ok(UploadProductResponse
+                            .builder()
+                            .message("Create product successfully!")
+                            .productId(newProduct.getId())
+                            .build());
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
@@ -88,7 +95,8 @@ public class ProductController {
     @PostMapping(value = "uploads/{id}",consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<?> uploadImgages(
             @ModelAttribute("files") List<MultipartFile> files,
-            @PathVariable("id") Long productId
+            @PathVariable("id") Long productId,
+            @RequestHeader("Authorization") String authorizationHeader
     ){
         try {
             Product existingProduct = productService.getProductById(productId);

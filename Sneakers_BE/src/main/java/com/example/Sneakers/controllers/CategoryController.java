@@ -10,6 +10,7 @@ import com.example.Sneakers.utils.MessageKeys;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
@@ -25,20 +26,20 @@ public class CategoryController {
 
     @PostMapping("")
     public ResponseEntity<?> createCategory(
-        @Valid @RequestBody CategoryDTO categoryDTO,
-        BindingResult result
+            @RequestBody CategoryDTO categoryDTO,
+            @RequestHeader("Authorization") String token
     ){
-        CategoryResponse categoryResponse = new CategoryResponse();
-        if(result.hasErrors()){
-            List<String> errorMessages = result.getFieldErrors().stream()
-                    .map(FieldError::getDefaultMessage).toList();
-            categoryResponse.setMessage(localizationUtils.getLocalizedMessage(MessageKeys.INSERT_CATEGORY_FAILED));
-            categoryResponse.setErrors(errorMessages);
-            return ResponseEntity.badRequest().body(categoryResponse);
+        try{
+            Category category = categoryService.createCategory(categoryDTO);
+            return ResponseEntity.ok(CategoryResponse
+                    .builder()
+                            .categories(categoryService.getAllCategories())
+                            .message("Create category successfully!")
+                    .build());
         }
-        Category category = categoryService.createCategory(categoryDTO);
-        categoryResponse.setCategory(category);
-        return ResponseEntity.ok(categoryResponse);
+        catch (Exception e){
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
     }
     @GetMapping("")
     public ResponseEntity<?> getAllCategories(
@@ -52,7 +53,8 @@ public class CategoryController {
     @PutMapping("/{id}")
     public ResponseEntity<UpdateCategoryResponse> updateCategory(
             @Valid @PathVariable("id") Long id,
-            @Valid @RequestBody CategoryDTO categoryDTO
+            @Valid @RequestBody CategoryDTO categoryDTO,
+            @RequestHeader("Authorization") String token
     ){
         UpdateCategoryResponse updateCategoryResponse = new UpdateCategoryResponse();
         categoryService.updateCategory(id, categoryDTO);
@@ -61,7 +63,8 @@ public class CategoryController {
     }
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteCategory(
-            @Valid @PathVariable("id") Long id
+            @Valid @PathVariable("id") Long id,
+            @RequestHeader("Authorization") String token
     ){
         categoryService.deleteCategory(id);
         return ResponseEntity.ok(localizationUtils.getLocalizedMessage(MessageKeys.DELETE_CATEGORY_SUCCESSFULLY));

@@ -2,6 +2,7 @@ package com.example.Sneakers.responses;
 
 import com.example.Sneakers.models.Category;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.github.javafaker.Cat;
 import lombok.*;
 
 import java.util.List;
@@ -15,9 +16,6 @@ public class CategoryResponse {
     @JsonProperty("message")
     private String message;
 
-    @JsonProperty("errors")
-    private List<String> errors;
-
-    @JsonProperty("category")
-    private Category category;
+    @JsonProperty("categories")
+    private List<Category> categories;
 }
