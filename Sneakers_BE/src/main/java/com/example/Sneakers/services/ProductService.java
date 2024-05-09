@@ -192,4 +192,12 @@ public class ProductService implements IProductService{
                 .totalProducts(productResponses.size())
                 .build();
     }
+
+    @Override
+    public Product setThumbnail(Long id, String thumbnail) throws Exception {
+        Product product = productRepository.findById(id)
+                .orElseThrow(() -> new Exception("Cannot find product with id = " + id));
+        product.setThumbnail(thumbnail);
+        return productRepository.save(product);
+    }
 }

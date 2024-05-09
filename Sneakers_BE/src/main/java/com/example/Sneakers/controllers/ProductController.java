@@ -132,6 +132,12 @@ public class ProductController {
                                 .build());
                 productImages.add(productImage);
             }
+            if(productImages.isEmpty()){
+                productService.setThumbnail(productId,"notfound.jpg");
+            }
+            else{
+                productService.setThumbnail(productId,productImages.get(0).getImageUrl());
+            }
             return ResponseEntity.ok().body(productImages);
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());

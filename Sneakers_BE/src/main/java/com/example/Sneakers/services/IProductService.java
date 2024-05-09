@@ -26,4 +26,5 @@ public interface IProductService {
     ListProductResponse getProductsByKeyword(String keyword);
     ListProductResponse getProductsByCategory(Long categoryId);
     ListProductResponse getRelatedProducts(Long productId) throws Exception;
+    Product setThumbnail(Long id,String thumbnail) throws Exception;
 }
