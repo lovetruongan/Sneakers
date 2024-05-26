@@ -29,4 +29,10 @@ jwt:
   expiration: 2592000
   secretKey: U0roD0fdqXHh6yEzmYciXkhmHlFsS7v2Xa3bLVPsyLQ=
 
+paypal:
+  mode: sandbox
+  client:
+    id: Ab_XzSvS2Y4Xt_Rh4Ka0fIx0wvg1OdQuyRpnHwlZkziyhALBR7nLulyRlxQ4ylXcDoL00y7v2kdjyn93
+    secret: EFcYw7mLeykugw7IH_8C7FAmUiu9m1USPqtzVgmCmcOeATWewwCq1-G3weXfvZvTB6GWoa4BYNf5rOEl
+
 logging.level.org.springframework.security: DEBUG

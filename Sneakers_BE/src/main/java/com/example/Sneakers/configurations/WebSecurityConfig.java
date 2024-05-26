@@ -51,6 +51,15 @@ public class WebSecurityConfig {
                             .requestMatchers(GET,
                                     String.format("%s/roles**", apiPrefix)).permitAll()
 
+                            .requestMatchers(POST,
+                                    String.format("%s/paypal/pay**", apiPrefix)).permitAll()
+
+                            .requestMatchers(GET,
+                                    String.format("%s/paypal/success*", apiPrefix)).permitAll()
+
+                            .requestMatchers(GET,
+                                    String.format("%s/paypal/cancel**", apiPrefix)).permitAll()
+
                             .requestMatchers(GET,
                                     String.format("%s/categories**", apiPrefix)).permitAll()
 
