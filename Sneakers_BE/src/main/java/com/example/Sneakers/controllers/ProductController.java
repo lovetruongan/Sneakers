@@ -5,10 +5,7 @@ import com.example.Sneakers.dtos.ProductDTO;
 import com.example.Sneakers.dtos.ProductImageDTO;
 import com.example.Sneakers.models.Product;
 import com.example.Sneakers.models.ProductImage;
-import com.example.Sneakers.responses.ListProductResponse;
-import com.example.Sneakers.responses.ProductListResponse;
-import com.example.Sneakers.responses.ProductResponse;
-import com.example.Sneakers.responses.UploadProductResponse;
+import com.example.Sneakers.responses.*;
 import com.example.Sneakers.services.IProductService;
 import com.example.Sneakers.utils.MessageKeys;
 import com.github.javafaker.Faker;
@@ -46,7 +43,6 @@ public class ProductController {
     private final IProductService productService;
     private final LocalizationUtils localizationUtils;
     @PostMapping("")
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<?> createProduct(
             @Valid @RequestBody ProductDTO productDTO,
             @RequestHeader("Authorization") String authorizationHeader,
@@ -138,7 +134,9 @@ public class ProductController {
             else{
                 productService.setThumbnail(productId,productImages.get(0).getImageUrl());
             }
-            return ResponseEntity.ok().body(productImages);
+            return ResponseEntity.ok().body(MessageResponse.builder()
+                            .message("Upload images successfully")
+                    .build());
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }

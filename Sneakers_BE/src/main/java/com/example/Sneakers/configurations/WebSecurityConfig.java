@@ -85,10 +85,10 @@ public class WebSecurityConfig {
                                     String.format("%s/products/images/*", apiPrefix)).permitAll()
 
                             .requestMatchers(POST,
-                                    String.format("%s/products**", apiPrefix)).hasAnyRole(Role.ADMIN)
+                                    String.format("%s/products**", apiPrefix)).hasRole(Role.ADMIN)
 
                             .requestMatchers(POST,
-                                    String.format("%s/products/uploads**", apiPrefix)).hasRole(Role.ADMIN)
+                                    String.format("%s/products/uploads/**", apiPrefix)).hasRole(Role.ADMIN)
 
                             .requestMatchers(PUT,
                                     String.format("%s/products/**", apiPrefix)).hasAnyRole(Role.ADMIN)

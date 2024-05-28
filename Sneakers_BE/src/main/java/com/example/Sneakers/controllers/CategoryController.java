@@ -67,6 +67,7 @@ public class CategoryController {
         UpdateCategoryResponse updateCategoryResponse = new UpdateCategoryResponse();
         categoryService.updateCategory(id, categoryDTO);
         updateCategoryResponse.setMessage(localizationUtils.getLocalizedMessage(MessageKeys.UPDATE_CATEGORY_SUCCESSFULLY));
+        updateCategoryResponse.setCategories(categoryService.getAllCategories());
         return ResponseEntity.ok(updateCategoryResponse);
     }
     @DeleteMapping("/{id}")
@@ -74,7 +75,10 @@ public class CategoryController {
             @Valid @PathVariable("id") Long id,
             @RequestHeader("Authorization") String token
     ){
+        UpdateCategoryResponse updateCategoryResponse = new UpdateCategoryResponse();
         categoryService.deleteCategory(id);
-        return ResponseEntity.ok(localizationUtils.getLocalizedMessage(MessageKeys.DELETE_CATEGORY_SUCCESSFULLY));
+        updateCategoryResponse.setMessage(localizationUtils.getLocalizedMessage(MessageKeys.DELETE_CATEGORY_SUCCESSFULLY));
+        updateCategoryResponse.setCategories(categoryService.getAllCategories());
+        return ResponseEntity.ok(updateCategoryResponse);
     }
 }
